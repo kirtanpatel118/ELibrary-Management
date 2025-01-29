@@ -1,0 +1,78 @@
+/* General Container */
+.booklist-container {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    
+    /* Heading */
+    .booklist-heading {
+        text-align: center;
+        font-size: 2rem;
+        color: #134B70;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    /* Table */
+    .booklist-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Arial', sans-serif;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .booklist-table-header {
+        background-color: #134B70;
+        color: white;
+        text-align: left;
+        font-size: 1rem;
+    }
+    
+    .booklist-table-th {
+        padding: 15px;
+        font-weight: bold;
+    }
+    
+    .booklist-table-row {
+        transition: background-color 0.3s ease;
+    }
+    
+    .booklist-table-row:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .booklist-table-data {
+        padding: 15px;
+        border-bottom: 1px solid #eeeeee;
+        color: #201E43;
+        font-size: 1rem;
+    }
+    
+    /* Book Image */
+    .booklist-book-image {
+        width: 50px;
+        height: auto;
+        margin-right: 15px;
+        border-radius: 4px;
+        vertical-align: middle;
+    }
+    
+    /* Loading and Error */
+    .booklist-loading,
+    .booklist-error {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #508C9B;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+    
