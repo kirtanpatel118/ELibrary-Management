@@ -1,0 +1,130 @@
+/* src/ViewUsers.css */
+
+/* Overall container */
+.userListContainer {
+        padding: 20px;
+        background-color: #f4f6f9;
+        font-family: Arial, sans-serif;
+        margin-top: 100px;
+      }
+      
+      /* Title */
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #134b70;
+      }
+      
+      /* Table Styling */
+      .userTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+      }
+      
+      .tableHeader {
+        background-color: #32448e;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+      }
+      
+      .tableRow {
+        background-color: #fff;
+      }
+      
+      .tableRow:nth-child(even) {
+        background-color: #eeeeee;
+      }
+      
+      .tableRow td {
+        padding: 12px;
+        text-align: left;
+      }
+      
+      .actionButton {
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 0 5px;
+      }
+      
+      .editButton {
+        background-color: #134b70;
+        color: #fff;
+      }
+      
+      .deleteButton {
+        background-color: #e74c3c;
+        color: #fff;
+      }
+      
+      .actionButton:hover {
+        opacity: 0.8;
+      }
+      
+      /* Edit Form */
+      .editFormContainer {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        width: 400px;
+        margin: 0 auto;
+      }
+      
+      .editFormTitle {
+        font-size: 22px;
+        color: #134b70;
+        margin-bottom: 20px;
+      }
+      
+      .formGroup {
+        margin-bottom: 15px;
+      }
+      
+      .formInput {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 5px;
+      }
+      
+      .submitButton,
+      .cancelButton {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 5px;
+      }
+      
+      .submitButton {
+        background-color: #508c9b;
+        color: #fff;
+      }
+      
+      .cancelButton {
+        background-color: #bdc3c7;
+        color: #fff;
+      }
+      
+      .submitButton:hover {
+        background-color: #134b70;
+      }
+      
+      .cancelButton:hover {
+        background-color: #7f8c8d;
+      }
+      
+      /* Loading Text */
+      .loadingText {
+        font-size: 18px;
+        color: #134b70;
+        text-align: center;
+        margin-top: 50px;
+      }
+      

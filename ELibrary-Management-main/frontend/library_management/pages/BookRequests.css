@@ -1,0 +1,82 @@
+/* Container Styles */
+.bookrequests-container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 60px;
+      }
+      
+      /* Heading Styles */
+      .bookrequests-heading {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #134B70;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      
+      /* Error Message Styles */
+      .bookrequests-error {
+        color: #ff4d4d;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      
+      /* Table Styles */
+      .bookrequests-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .bookrequests-table-header {
+        background-color: #134B70;
+        color: #ffffff;
+      }
+      
+      .bookrequests-table-th {
+        padding: 15px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      
+      .bookrequests-table-row {
+        transition: background-color 0.3s ease;
+      }
+      
+      .bookrequests-table-row:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      .bookrequests-table-row:hover {
+        background-color: #e6f7ff;
+      }
+      
+      .bookrequests-table-data {
+        padding: 15px;
+        border-bottom: 1px solid #dddddd;
+        font-size: 1rem;
+        color: #201E43;
+        word-wrap: break-word;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .bookrequests-table {
+          font-size: 0.9rem;
+        }
+      
+        .bookrequests-heading {
+          font-size: 1.8rem;
+        }
+      }
+      

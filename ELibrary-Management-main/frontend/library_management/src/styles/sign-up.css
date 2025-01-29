@@ -1,0 +1,231 @@
+/* Register Page Styling */
+.signup-body {
+    background: url(./images/6.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 480px;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 70vh;
+    padding-right: 20px;
+}
+
+.signup-wrapper img {
+    width: 45%;
+    display: block;
+    margin: 0 auto 20px;
+}
+/* Custom Scrollbar */
+.signup-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+
+.signup-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.signup-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #1e1e1e, #1e1e1e);
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.signup-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #1e1e1e, #1e1e1e);
+}
+
+.signup-wrapper::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(45deg, #1e1e1e, #1e1e1e);
+}
+
+.signup-wrapper::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.signup-wrapper::-webkit-scrollbar-button {
+    background-color: transparent;
+}
+
+/* General Form Styling */
+.signup-wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.signup-input-box {
+    margin-bottom: 10px;
+}
+
+.signup-input-box input,
+.signup-input-box select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+
+.signup-input-box input:focus,
+.signup-input-box select:focus {
+    outline: none;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.signup-input-box input::placeholder,
+.signup-input-box select option {
+    color: #bbb;
+}
+
+/* Styling for the labels of the form fields */
+.signup-form-group label,
+.signup-input-box label {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Add padding between fields */
+.signup-form-group {
+    margin-bottom: 20px;
+}
+
+/* Input Fields Styling for Register Form */
+.signup-form-control {
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Focused Input Field Styling */
+.signup-form-control:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Button Styling for Register Form */
+.signup-btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+.signup-btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Text Center */
+.signup-text-center {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.signup-text-center a {
+    color: #00f;
+}
+
+.signup-text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Disabled Button */
+.signup-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Add this to your existing CSS file (App.css or another CSS file) */
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+/* Ensure text inside the input fields is visible */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="password"], 
+input[type="date"], 
+select {
+color: #333; /* Dark text color */
+background-color: #fff; /* Light background for better contrast */
+border: 1px solid #ccc; /* Light border */
+padding: 8px;
+font-size: 14px;
+width: 100%;
+box-sizing: border-box;
+}
+
+/* Focus state for input fields */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus, 
+input[type="password"]:focus, 
+input[type="date"]:focus, 
+select:focus {
+border: 2px solid #508C9B; /* Highlight border on focus */
+background-color: #f4f9fa; /* Light background on focus */
+}
+
+input::placeholder {
+color: #000000; /* Placeholder text color */
+}
+
+/* Styling for the select input */
+select {
+    color: #333; /* Dark text color */
+    background-color: #fff; /* Light background for normal state */
+    border: 1px solid #ccc; /* Light border */
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  
+  /* Styling for the dropdown when it's open */
+  select:focus, select:active {
+    background-color: #000; /* Black background when focused */
+    color: #fff; /* White text color */
+    border-color: #508C9B; /* Highlighted border color */
+  }
+  
+  /* Style the options when the dropdown is open */
+  select option {
+    background-color: #000; /* Black background for options */
+    color: #fff; /* White text for options */
+  }
+  
+  /* Style the select options on hover */
+  select option:hover {
+    background-color: #333; /* Darker background when hovering over options */
+    color: #fff; /* Ensure text remains white on hover */
+  }

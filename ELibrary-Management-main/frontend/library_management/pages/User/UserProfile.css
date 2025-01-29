@@ -1,0 +1,117 @@
+/* Main container */
+.profile-container {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 30px;
+        max-width: 600px;
+        margin: 50px auto;
+        margin-top: 100px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Header styling */
+      .profile-header {
+        font-size: 24px;
+        font-weight: bold;
+        color: #201e43;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      /* Card container */
+      .profile-card {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      
+      /* Form layout */
+      .profile-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      /* Field container */
+      .profile-field {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        color: #201e43;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+      
+      .profile-field:hover {
+        background-color: #dddddd;
+      }
+      
+      /* Labels and values */
+      .profile-label {
+        flex: 1;
+        text-align: left;
+        color: #508c9b;
+        font-weight: 600;
+      }
+      
+      .profile-value {
+        flex: 2;
+        text-align: right;
+        color: #134b70;
+        font-weight: 400;
+      }
+      
+      /* Button styling */
+      .profile-button {
+        background-color: #134b70;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+      
+      .profile-button:hover {
+        background-color: #508c9b;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .profile-container {
+          padding: 20px;
+        }
+      
+        .profile-header {
+          font-size: 20px;
+        }
+      
+        .profile-field {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+        }
+      
+        .profile-label {
+          font-size: 14px;
+        }
+      
+        .profile-value {
+          font-size: 14px;
+        }
+      }
+      
