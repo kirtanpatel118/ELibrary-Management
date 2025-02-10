@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './BookRequests.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "./BookRequests.css";
 
 function BookRequests() {
   const [bookRequests, setBookRequests] = useState([]);
@@ -9,10 +9,12 @@ function BookRequests() {
   useEffect(() => {
     const fetchBookRequests = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/admin/book-requests`);
+        const response = await axios.get(
+          `http://localhost:3000/admin/book-requests`,
+        );
         setBookRequests(response.data.bookRequests);
       } catch (err) {
-        setError('Error fetching book requests');
+        setError("Error fetching book requests");
         console.error(err);
       }
     };

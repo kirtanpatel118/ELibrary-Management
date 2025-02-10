@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 // import { Link } from 'react-router-dom'; // Ensure you have react-router-dom installed
-import './ForgotPassword.css'; // Import the CSS file for the Forgot Password page
+import "./ForgotPassword.css"; // Import the CSS file for the Forgot Password page
 
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
-import { useNavigate, Link } from 'react-router-dom';
-
+import { useNavigate, Link } from "react-router-dom";
 
 function ForgotPassword() {
   const [ForGotPassword, setForGotPassword] = useState({
-    email: '',
-    role: '',
-    newPassword: '',
-    confirmPassword: '',
+    email: "",
+    role: "",
+    newPassword: "",
+    confirmPassword: "",
   });
 
   const navigate = useNavigate();
@@ -30,24 +29,24 @@ function ForgotPassword() {
     const { newPassword, confirmPassword, email, role } = ForGotPassword;
 
     if (newPassword.length < 8 || confirmPassword.length < 8) {
-      setError('Password must be at least 8 characters long');
+      setError("Password must be at least 8 characters long");
       return;
     }
 
     if (newPassword !== confirmPassword) {
-      setError('Passwords do not match');
+      setError("Passwords do not match");
       return;
     }
 
     try {
       // Define the endpoint based on the role
-      let endpoint = '';
-      if (role === 'admin') {
-        endpoint = 'http://localhost:3000/admin/forgot-password';
-      } else if (role === 'faculty') {
-        endpoint = 'http://localhost:3000/faculty/forgot-password';
-      } else if (role === 'student') {
-        endpoint = 'http://localhost:3000/user/forgot-password';
+      let endpoint = "";
+      if (role === "admin") {
+        endpoint = "http://localhost:3000/admin/forgot-password";
+      } else if (role === "faculty") {
+        endpoint = "http://localhost:3000/faculty/forgot-password";
+      } else if (role === "student") {
+        endpoint = "http://localhost:3000/user/forgot-password";
       }
 
       // Make the API request
@@ -59,16 +58,16 @@ function ForgotPassword() {
 
       // Check for success
       if (response.status === 200) {
-        setSuccess('Password reset successfully!');
-        toast.success('Password reset successfully!')
+        setSuccess("Password reset successfully!");
+        toast.success("Password reset successfully!");
         setError(null); // Clear any previous errors
-        navigate('/login');
+        navigate("/login");
       } else {
-        setError('Error resetting password');
-        toast.error('Error resetting password');
+        setError("Error resetting password");
+        toast.error("Error resetting password");
       }
     } catch (error) {
-      setError(error.response?.data?.error || 'Error resetting password');
+      setError(error.response?.data?.error || "Error resetting password");
     }
   };
 
@@ -83,12 +82,14 @@ function ForgotPassword() {
         <h1 className="forgot-password-card-title">Forgot Password</h1>
         <form onSubmit={handleSubmit}>
           <div className="forgot-password-form-group">
-            <label htmlFor="role" className="forgot-password-form-group-label">Role</label>
+            <label htmlFor="role" className="forgot-password-form-group-label">
+              Role
+            </label>
             <select
-              name='role'
+              name="role"
               value={ForGotPassword.role}
               onChange={handleOnChange}
-              className='form-select login-form-control'
+              className="form-select login-form-control"
             >
               <option value="">Select Role</option>
               <option value="student">Student</option>
@@ -98,7 +99,9 @@ function ForgotPassword() {
           </div>
 
           <div className="forgot-password-form-group">
-            <label htmlFor="email" className="forgot-password-form-group-label">Email:</label>
+            <label htmlFor="email" className="forgot-password-form-group-label">
+              Email:
+            </label>
             <input
               type="email"
               name="email"
@@ -110,7 +113,12 @@ function ForgotPassword() {
           </div>
 
           <div className="forgot-password-form-group">
-            <label htmlFor="newPassword" className="forgot-password-form-group-label">New Password:</label>
+            <label
+              htmlFor="newPassword"
+              className="forgot-password-form-group-label"
+            >
+              New Password:
+            </label>
             <input
               type="password"
               id="newPassword"
@@ -122,7 +130,12 @@ function ForgotPassword() {
           </div>
 
           <div className="forgot-password-form-group">
-            <label htmlFor="confirmPassword" className="forgot-password-form-group-label">Confirm Password:</label>
+            <label
+              htmlFor="confirmPassword"
+              className="forgot-password-form-group-label"
+            >
+              Confirm Password:
+            </label>
             <input
               type="password"
               id="confirmPassword"
@@ -140,8 +153,8 @@ function ForgotPassword() {
             Reset Password
           </button>
         </form>
-      {/* Add the 'Back to Login' link below the Reset Password button */}
-      <div className="forgot-password-back-to-login">
+        {/* Add the 'Back to Login' link below the Reset Password button */}
+        <div className="forgot-password-back-to-login">
           <Link to="" className="forgot-password-back-to-login-link">
             Back to Login
           </Link>

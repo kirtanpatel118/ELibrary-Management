@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import toast, { Toaster } from 'react-hot-toast';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 // import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './IssuedBooks.css';
+import "./IssuedBooks.css";
 
 const IssuedBooks = () => {
   const [issuedBooks, setIssuedBooks] = useState([]);
@@ -10,20 +10,23 @@ const IssuedBooks = () => {
   useEffect(() => {
     const fetchIssuedBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/admin/issued-books', {
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        });
+        const response = await axios.get(
+          "http://localhost:3000/admin/issued-books",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          },
+        );
         if (response.data.ok) {
           setIssuedBooks(response.data.issuedBooks);
         } else {
-          toast.error('Failed to fetch issued books');
+          toast.error("Failed to fetch issued books");
         }
       } catch (error) {
         console.error(error);
-        toast.error('An error occurred while fetching issued books');
+        toast.error("An error occurred while fetching issued books");
       }
     };
 
@@ -32,21 +35,24 @@ const IssuedBooks = () => {
 
   const handleReturnBook = async (issuedBookId, bookId) => {
     try {
-      const response = await axios.post(`http://localhost:3000/admin/return-book/${issuedBookId}`, { bookId });
+      const response = await axios.post(
+        `http://localhost:3000/admin/return-book/${issuedBookId}`,
+        { bookId },
+      );
       if (response.data.ok) {
-        toast.success('Book returned successfully');
+        toast.success("Book returned successfully");
         // Update the issuedBooks state to reflect the returned book
-        setIssuedBooks(prevBooks =>
-          prevBooks.map(book =>
-            book._id === issuedBookId ? { ...book, returned: true } : book
-          )
+        setIssuedBooks((prevBooks) =>
+          prevBooks.map((book) =>
+            book._id === issuedBookId ? { ...book, returned: true } : book,
+          ),
         );
       } else {
-        toast.error('Failed to return the book');
+        toast.error("Failed to return the book");
       }
     } catch (error) {
       console.error(error);
-      toast.error('An error occurred while returning the book');
+      toast.error("An error occurred while returning the book");
     }
   };
 
@@ -55,7 +61,9 @@ const IssuedBooks = () => {
       <Toaster />
       <h2 className="issued-books-header">Issued Books</h2>
       {issuedBooks.length === 0 ? (
-        <p className="no-issued-books-message">No books have been issued yet.</p>
+        <p className="no-issued-books-message">
+          No books have been issued yet.
+        </p>
       ) : (
         <div className="issued-books-table-container">
           <table className="issued-books-table table">
@@ -76,8 +84,14 @@ const IssuedBooks = () => {
                     {issuedBook.userId.email}
                   </td>
                   <td className="issued-books-book-info">
-                    {issuedBook.bookId ? issuedBook.bookId.Bookname : 'Unknown Book'} <br />
-                    by {issuedBook.bookId ? issuedBook.bookId.Author : 'Unknown Author'}
+                    {issuedBook.bookId
+                      ? issuedBook.bookId.Bookname
+                      : "Unknown Book"}{" "}
+                    <br />
+                    by{" "}
+                    {issuedBook.bookId
+                      ? issuedBook.bookId.Author
+                      : "Unknown Author"}
                   </td>
                   <td className="issued-books-date-column">
                     {new Date(issuedBook.issuedAt).toLocaleString()}
@@ -91,7 +105,15 @@ const IssuedBooks = () => {
                         Returned
                       </button>
                     ) : (
-                      <button className="btn btn-danger" onClick={() => handleReturnBook(issuedBook._id, issuedBook.bookId._id)}>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() =>
+                          handleReturnBook(
+                            issuedBook._id,
+                            issuedBook.bookId._id,
+                          )
+                        }
+                      >
                         Not Returned
                       </button>
                     )}

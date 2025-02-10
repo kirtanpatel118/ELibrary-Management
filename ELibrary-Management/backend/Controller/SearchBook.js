@@ -2,8 +2,8 @@ const Book = require('../Model/Book'); // Adjust the path as necessary
 
 const SearchBook = async (req, res) => {
     // const { Bookname, Category } = req.body; // Ensure these match your request structure
-    const BookData=req.body
-    console.log(BookData);
+    const { Bookname, Category } = req.body; // Ensure these match your request structure
+    console.log({ Bookname, Category });
 
     try {
         // Create a query object

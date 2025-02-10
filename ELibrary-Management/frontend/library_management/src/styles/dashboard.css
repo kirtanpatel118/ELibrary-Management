@@ -1,0 +1,22 @@
+
+    /* Dashboard Layout */
+    .dashboard {
+        display: grid;
+        grid-template-columns: 200px auto;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .sidebar {
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        min-height: 100vh;
+    }
+    
+    .content {
+        background: #ecf0f1;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    

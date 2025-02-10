@@ -5,7 +5,7 @@ const path = require('path');
 
 const add = require('../Controller/Admin/Add');
 const Book = require('../Model/Book');
-<<<<<<< HEAD
+
 const {getBook,updateBook,deleteBook}=require('../Controller/protectedRoute');
 const IssuedBook = require('../Model/IssueBook');
 const {  IssuedBooks, FinalIssue, ReturnBook } = require('../Controller/Admin/IssueBook');
@@ -18,8 +18,8 @@ const Display_Users_Queiries = require('../Controller/Display_Users_Queries');
 const { NewBookRequestFetch } = require('../Controller/RequestBook');
 const { UpdateAdminProfile } = require('../Controller/UpdateProfile');
 
-=======
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
+
 
 // const upload = multer({
 //   dest: path.join(__dirname, './Books/Photos'), // Use absolute path
@@ -48,8 +48,16 @@ const { UpdateAdminProfile } = require('../Controller/UpdateProfile');
 
 // router.post('/addbook', bookPhotoUpload, add);
 
+const storage = multer.diskStorage({
+  destination: path.join(__dirname, './Books/Photos'), // Use absolute path
+  filename(req, file, cb) {
+    const filename = `${req.params.uID}-${Date.now()}-${file.originalname}`;
+    cb(null, filename);
+  }
+});
+
 const upload = multer({
-  dest: path.join(__dirname, './Books/Photos'), // Use absolute path
+  storage: storage,
   limits: {
     fileSize: 2000000 // 2MB
   },
@@ -60,17 +68,13 @@ const upload = multer({
       cb(null, false);
       return cb(new Error('Please upload an image'));
     }
-  },
-  filename(req, file, cb) {
-    const filename = `${req.params.uID}-${Date.now()}-${file.originalname}`;
-    cb(null, filename);
   }
 });
 
 const bookPhotoUpload = upload.single('bookPhoto');
 
 router.post('/addbook/:uID', bookPhotoUpload, add);
-<<<<<<< HEAD
+
 router.delete('/delete-book/:bookId', deleteBook);
 router.get('/get-book/:bookId', getBook);
 router.patch('/update-book/:bookId', updateBook);
@@ -94,7 +98,7 @@ router.get('/contact-queries',Display_Users_Queiries);
 router.get('/book-requests',NewBookRequestFetch);
 router.patch('/profile/update/:uID',UpdateAdminProfile);
 // router.patch(`/book/update/${bID}`,);
-=======
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
+
 
 module.exports = router;

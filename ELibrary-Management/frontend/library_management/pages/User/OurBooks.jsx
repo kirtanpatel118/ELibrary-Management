@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-<<<<<<< HEAD
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import {useNavigate } from "react-router-dom";
 import './our-books.css';
+import React from 'react';
 
+// eslint-disable-next-line react/prop-types
 const Cart = ({ items }) => {
   return (
     <div className="container my-5">
@@ -27,19 +30,10 @@ const Cart = ({ items }) => {
 function OurBooks() {
   const [Books, setBooks] = useState([]);
   const [issuedBooks, setIssuedBooks] = useState([]);
-  const [totalIssuedBooks, setTotalIssuedBooks] = useState(0); // Track total issued books
-  const [searchQuery, setSearchQuery] = useState(""); // State for search
+  const [totalIssuedBooks, setTotalIssuedBooks] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const navigate = useNavigate();
-
-  const goToCart = () => {
-    localStorage.removeItem('issuedBooks');
-    localStorage.setItem('issuedBooks', JSON.stringify(issuedBooks));
-    navigate('/cart');
-  };
-
-
-
 
   useEffect(() => {
     const token = localStorage.getItem('jwt_token');
@@ -58,37 +52,32 @@ function OurBooks() {
     }
   }, []);
 
-  // const handleAddToCart = (book) => {
-  //   // Check if the book is already issued
-  //   if (!issuedBooks.some(issuedBook => issuedBook._id === book._id)) {
-  //     if (totalIssuedBooks < 2) { // Check total issued limit
-  //       setIssuedBooks((prevItems) => [...prevItems, book]);
-  //       setTotalIssuedBooks((prevTotal) => prevTotal + 1); // Increment total issued books
-  //     }
-  //   }
-  // };
-
   const handleAddToCart = (book) => {
-    // Check if the book is already issued
+    // @ts-ignore
     if (issuedBooks.some(issuedBook => issuedBook._id === book._id)) {
-      // Remove the book from issuedBooks
+      // @ts-ignore
       setIssuedBooks(prevItems => prevItems.filter(issuedBook => issuedBook._id !== book._id));
-      setTotalIssuedBooks(prevTotal => prevTotal - 1); // Decrement total issued books
+      setTotalIssuedBooks(prevTotal => prevTotal - 1);
     } else {
-      // Add the book to issuedBooks if the limit is not reached
       if (totalIssuedBooks < 2) {
+        // @ts-ignore
         setIssuedBooks(prevItems => [...prevItems, book]);
-        setTotalIssuedBooks(prevTotal => prevTotal + 1); // Increment total issued books
+        setTotalIssuedBooks(prevTotal => prevTotal + 1);
       }
     }
   };
 
+  const goToCart = () => {
+    localStorage.setItem('issuedBooks', JSON.stringify(issuedBooks));
+    navigate('/cart');
+  };
 
   const filteredBooks = Books.filter(book =>
+    // @ts-ignore
     book.Bookname.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    // @ts-ignore
     book.Author.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
 
   return (
     <>
@@ -99,7 +88,6 @@ function OurBooks() {
         </div>
       </section>
 
-      {/* Books Grid */}
       <section className="books-grid py-5">
         <div className="container">
           <div className="mb-4">
@@ -111,52 +99,28 @@ function OurBooks() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          {/* <div className="row g-4">
-            {Books.map((Book) => (
-              <div className="col-lg-3 col-md-4 col-sm-6" key={Book._id}>
-                <div className="card shadow-sm">
-                  <img src={Book.BookPhoto.url} alt='book from backend' loading="fast" className="card-img-top" />
-                  <div className="card-body text-center">
-                    <h5 className="card-title">{Book.Bookname}</h5>
-                    <p className="card-text text-muted">Author: {Book.Author}</p>
-                    <p >price:{Book.Price}</p>
-                    {/* <button
-                      onClick={() => handleAddToCart(Book)}
-                      disabled={totalIssuedBooks >= 2 || issuedBooks.some(issuedBook => issuedBook._id === Book._id)} // Disable if total issued is 2 or book is already issued
-                      className="btn btn-primary btn-sm"
-                    >
-                      {totalIssuedBooks >= 2 ? 'Limit Reached for All Books' : issuedBooks.some(issuedBook => issuedBook._id === Book._id) ? 'Already Issued' : 'Issue Book'}
-                    </button> *
-                    <button
-                      onClick={() => handleAddToCart(Book)}
-                      disabled={totalIssuedBooks >= 2 && !issuedBooks.some(issuedBook => issuedBook._id === Book._id)} // Disable if total issued is 2 and book is not already issued
-                      // className="btn btn-primary btn-sm"
-                      className={`btn btn-sm ${issuedBooks.some(issuedBook => issuedBook._id === Book._id) ? 'btn-danger' : 'btn-primary'}`} // Change class based on issued state
-                    >
-                      {issuedBooks.some(issuedBook => issuedBook._id === Book._id) ? 'Remove Book' : totalIssuedBooks >= 2 ? 'Limit Reached for All Books' : 'Issue Book'}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
-
 
           <div className="row g-4">
             {filteredBooks.map((Book) => (
               <div className="col-lg-3 col-md-4 col-sm-6" key={Book._id}>
                 <div className="card shadow-sm">
-                  <img src={Book.BookPhoto.url} alt='book from backend' loading="fast" className="card-img-top" />
+                  <img src={Book.BookPhoto.url} alt='book from backend' 
+// @ts-ignore
+                  loading="fast" className="card-img-top" />
                   <div className="card-body text-center">
                     <h5 className="card-title">{Book.Bookname}</h5>
                     <p className="card-text text-muted">Author: {Book.Author}</p>
                     <p>Price: {Book.Price}</p>
                     <button
                       onClick={() => handleAddToCart(Book)}
-                      disabled={totalIssuedBooks >= 2 && !issuedBooks.some(issuedBook => issuedBook._id === Book._id)} // Disable if total issued is 2 and book is not already issued
-                      className={`btn btn-sm ${issuedBooks.some(issuedBook => issuedBook._id === Book._id) ? 'btn-danger' : 'btn-primary'}`} // Change class based on issued state
+                      // @ts-ignore
+                      disabled={totalIssuedBooks >= 2 && !issuedBooks.some(issuedBook => issuedBook._id === Book._id)}
+                      // @ts-ignore
+                      className={`btn btn-sm ${issuedBooks.some(issuedBook => issuedBook._id === Book._id) ? 'btn-danger' : 'btn-primary'}`}
                     >
-                      {issuedBooks.some(issuedBook => issuedBook._id === Book._id) ? 'Remove Book' : totalIssuedBooks >= 2 ? 'Limit Reached for All Books' : 'Issue Book'}
+                      {issuedBooks.some(issuedBook => issuedBook.
+// @ts-ignore
+                      _id === Book._id) ? 'Remove Book' : totalIssuedBooks >= 2 ? 'Limit Reached for All Books' : 'Issue Book'}
                     </button>
                   </div>
                 </div>
@@ -178,55 +142,6 @@ function OurBooks() {
       </div>
     </>
   );
-=======
-import { useLocation, useNavigate } from 'react-router-dom';
-
-function OurBooks() {
-        const [Books, setBooks] = useState([]);
-
-        useEffect(() => {
-                const token = localStorage.getItem('jwt_token');
-                if (token) {
-                        axios.get('http://localhost:3000/user/get-all-books', {
-                                headers: { Authorization: `Bearer ${token}` },
-                        })
-                                .then((response) => {
-                                        if (response.data.ok) {
-                                                console.log(response.data)
-                                                setBooks(response.data.posts);
-                                                setLoading(false);
-                                                // console.log(response.data.posts)
-
-                                        }
-                                })
-                                .catch((error) => {
-                                        console.error("gadbad hai kuch:", error);
-                                });
-                }
-
-        }, [])
-        return (
-                <>
-                        {/* <h1>our books</h1> */}
-
-                        <main>
-
-                                <>
-
-                                        {Books.map((Book) => (
-                                                <div key={Book._id}>
-                                                        <img
-                                                                src={Book.image.url}
-                                                                alt='book from backend'
-                                                                loading="fast"
-                                                        />
-                                                </div>
-                                        ))}
-                                </>
-                        </main>
-                </>
-        );
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
 }
 
 export default OurBooks;

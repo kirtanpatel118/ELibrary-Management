@@ -18,7 +18,7 @@ const Add = async (req, res) => {
   
     try {
       const bookData = req.body;
-<<<<<<< HEAD
+
       console.log(bookData);
       const bookPhoto = req.file;
       const uId=req.params.id;
@@ -26,14 +26,12 @@ const Add = async (req, res) => {
 
       // Validate book data
       if (!bookData.Category || !bookData.Bookname || !bookData.Bookid || !bookData.Author || !bookData.Price ) {
-=======
-      const bookPhoto = req.file;
-      const uId=req.params.id;
+        return res.status(400).json({ ok: false, message: 'Please provide all required fields' });
+      }
 
       console.log(bookPhoto);
       // Validate book data
       if (!bookData.Category || !bookData.Bookname || !bookData.Bookid || !bookData.Author) {
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
         return res.status(400).json({ ok: false, message: 'Please provide all required fields' });
       }
 
@@ -55,11 +53,11 @@ const Add = async (req, res) => {
         Bookname: bookData.Bookname,
         Bookid: bookData.Bookid,
         Author: bookData.Author,
-<<<<<<< HEAD
+
         Price:bookData.Price,
         Quantity:bookData.Quantity,
-=======
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
+
         BookPhoto: {
           public_id:result.public_id,
           url:result.secure_url

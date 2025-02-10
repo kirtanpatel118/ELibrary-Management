@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Swal from 'sweetalert2'; // Ensure you have SweetAlert2 installed
+import React, { useState } from "react";
+import axios from "axios";
+import Swal from "sweetalert2"; // Ensure you have SweetAlert2 installed
 
 function SearchedBooks() {
   const [search, setSearch] = useState({
-    BookName: '',
-    Category: ''
+    BookName: "",
+    Category: "",
   });
 
   const [books, setBooks] = useState([]); // Add a state to store the search results
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setSearch(prevState => ({
+    setSearch((prevState) => ({
       ...prevState,
-      [name]: value // Use the name attribute to update the corresponding state
+      [name]: value, // Use the name attribute to update the corresponding state
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = localStorage.getItem('JWT_Token');
+    const token = localStorage.getItem("JWT_Token");
     console.log(search);
     if (token) {
-      axios.post(`http://localhost:3000/user/search-book`, search, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      axios
+        .post(`http://localhost:3000/user/search-book`, search, {
+          headers: { Authorization: `Bearer ${token}` },
+        })
         .then((response) => {
           if (response.data.ok) {
             console.log(response.data.message);
@@ -37,18 +38,18 @@ function SearchedBooks() {
               icon: "error",
               title: response.data.message || "No books found",
               showConfirmButton: false,
-              timer: 1500
+              timer: 1500,
             });
           }
         })
-        .catch(err => {
+        .catch((err) => {
           console.error(err);
           Swal.fire({
             position: "top-center",
             icon: "error",
             title: "An error occurred",
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
           });
         });
     }
@@ -68,7 +69,9 @@ function SearchedBooks() {
             onChange={handleInputChange} // Call the updated handler
           />
           <br />
-          <label htmlFor="category" className="form-label">Book Category</label>
+          <label htmlFor="category" className="form-label">
+            Book Category
+          </label>
           <select
             className="form-select"
             id="category"
@@ -76,14 +79,18 @@ function SearchedBooks() {
             onChange={handleInputChange} // Call the updated handler
             required
           >
-            <option value="" selected disabled>Choose category</option>
+            <option value="" selected disabled>
+              Choose category
+            </option>
             <option value="Programming">Programming</option>
             <option value="Law">Law</option>
             <option value="Commerce">Commerce</option>
             <option value="Designing">Designing</option>
           </select>
 
-          <button type="submit" className="btn btn-primary">Search</button>
+          <button type="submit" className="btn btn-primary">
+            Search
+          </button>
         </form>
 
         {/* Display the search results */}

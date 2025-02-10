@@ -63,6 +63,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mini').then(() => {
 });
 
 
+// @ts-ignore
 const StudentSchema = mongoose.Schema(
   {
     firstname: {
@@ -93,7 +94,7 @@ const StudentSchema = mongoose.Schema(
       type: String,
       required: true
     },
-<<<<<<< HEAD
+
     role: {
       type: String,
       required: true
@@ -103,7 +104,7 @@ const StudentSchema = mongoose.Schema(
     //   type: Boolean,
     //   default: false,
     // },
-=======
+
 
     // role: {
     //   type: String,
@@ -114,7 +115,7 @@ const StudentSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
     profilePicture: String,
     // coverPicture: String,
     about: String,
@@ -126,15 +127,15 @@ const StudentSchema = mongoose.Schema(
 StudentSchema.pre('save', async function (next) {
   const user = this;
 
-<<<<<<< HEAD
+
   // if (!user.isModified('password')) {
   //   next();
   // }
-=======
+
   if (!user.isModified('password')) {
     next();
   }
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
   try {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(user.password, salt);
@@ -152,13 +153,14 @@ StudentSchema.methods.generateToken = async function () {
     const user = this;
     const token = jwt.sign({
       _id: user._id.toString(),
-<<<<<<< HEAD
+
       role:this.role,
-=======
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
+
       email: this.email,
       mobileNo: this.mobileNo,
     },
+      // @ts-ignore
       process.env.JWT_SECRET_KEY,
       {
         expiresIn: '7d'

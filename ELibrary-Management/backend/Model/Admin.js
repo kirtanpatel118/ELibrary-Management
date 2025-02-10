@@ -10,6 +10,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mini').then(() => {
 });
 
 
+// @ts-ignore
 const AdminSchema = mongoose.Schema(
     {
         firstname: {
@@ -36,6 +37,7 @@ const AdminSchema = mongoose.Schema(
             type: String,
             required: true
         },
+        // @ts-ignore
         role: {
             type: String,
             required: true
@@ -81,6 +83,7 @@ AdminSchema.methods.generateToken = async function () {
             email: this.email,
             mobileNo: this.mobileNo,
         },
+            // @ts-ignore
             process.env.JWT_SECRET_KEY,
             {
                 expiresIn: '7d'

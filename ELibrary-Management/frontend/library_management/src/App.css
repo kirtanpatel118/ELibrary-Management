@@ -9,7 +9,7 @@ body {
 body {
         display: flex;
         flex-direction: column;
-<<<<<<< HEAD
+
  
 }
 
@@ -78,9 +78,6 @@ body {
 
 .navbar-nav .fa-user-circle:hover {
         color: #ffffff;
-}
-
-=======
 }
 
 
@@ -312,7 +309,7 @@ body {
 
 
 
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
 
 /* Navbar styling */
 .navbar {
@@ -388,11 +385,11 @@ body {
         /* Optional: dark overlay for better text readability */
         border-radius: 10px;
         padding: 20px;
-<<<<<<< HEAD
+
         margin-left: 140px;
-=======
+
         /* margin-left: 150px; */
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
         /* Adjust margin to move the content slightly from the left edge */
 }
 
@@ -634,9 +631,9 @@ body {
 
 
 
-<<<<<<< HEAD
 
-=======
+
+
 /* Footer Styling */
 .footer {
         background-color: #343a40;
@@ -733,7 +730,7 @@ body {
         /* Adjust this value if your navbar height is different */
         z-index: 1;
         /* Ensure the hero section is above the navbar */
-        background-blur: 8px;
+        backdrop-filter: blur(8px);
         /* Optional: Add a blur effect to the background */
 
 }
@@ -1001,7 +998,7 @@ body {
 .footer p {
         margin-bottom: 0;
 }
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d
+
 
 
 
@@ -1538,7 +1535,7 @@ button[type="submit"]:hover {
 
 .book-card .btn:hover {
         background-color: #0056b3;
-<<<<<<< HEAD
+
 }
 
 
@@ -1722,6 +1719,3 @@ button[type="submit"]:hover {
             flex-direction: column;
         }
     }
-=======
-}
->>>>>>> cb17a1bbfeafe2128bf841412e5c61f97dd9249d

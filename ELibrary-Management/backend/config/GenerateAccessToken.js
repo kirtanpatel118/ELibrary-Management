@@ -17,6 +17,7 @@ async function GenerateAccessToken(user) {
   const options = { expiresIn: '7d' };
 
   try {
+    // @ts-ignore
     return jwt.sign(payload, secret, options);
   } catch (error) {
     console.error('Error generating access token:', error);

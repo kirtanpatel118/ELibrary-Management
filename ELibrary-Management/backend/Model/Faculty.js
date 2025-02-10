@@ -11,6 +11,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mini').then(() => {
 });
 
 
+// @ts-ignore
 const facultySchema = mongoose.Schema(
   {
     firstname: {
@@ -41,6 +42,7 @@ const facultySchema = mongoose.Schema(
       type: Date,
       required: true
     },
+    // @ts-ignore
     faculty_id: {
       type: String,
       required: true
@@ -92,6 +94,7 @@ facultySchema.methods.generateToken = async function () {
       email: this.email,
       mobileNo: this.mobileNo,
     },
+      // @ts-ignore
       process.env.JWT_SECRET_KEY,
       {
         expiresIn: '7d'

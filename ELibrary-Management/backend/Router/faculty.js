@@ -5,7 +5,7 @@ const path = require('path');
 
 
 const { Home, allUser, ProfileUpdate, AllBooks } = require('../Controller/protectedRoute');
-const { Registser,Login, auth_me,contact } = require('../Controller/authController');
+const { Register,Login, auth_me,contact } = require('../Controller/authController');
 const { RequestBook } = require('../Controller/RequestBook');
 const authenticate_me = require('../Middleware/authenticate_me');
 const { ForgotPassword } = require('../Controller/ForgotPassword');

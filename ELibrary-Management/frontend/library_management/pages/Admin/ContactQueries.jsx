@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './ContactQueries.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "./ContactQueries.css";
 
 function ContactQueries() {
   const [contacts, setContacts] = useState([]);
@@ -9,10 +9,12 @@ function ContactQueries() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/admin/contact-queries');
+        const response = await axios.get(
+          "http://localhost:3000/admin/contact-queries",
+        );
         setContacts(response.data.contacts);
       } catch (err) {
-        setError('Error fetching contacts');
+        setError("Error fetching contacts");
         console.error(err);
       }
     };
