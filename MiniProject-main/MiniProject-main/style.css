@@ -1,0 +1,1230 @@
+/* Ensure full height of hero section with no space between navbar and hero */
+html,
+body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+body {
+        display: flex;
+        flex-direction: column;
+}
+
+/* Navbar styling */
+.navbar {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        /* Match your desired background color */
+        margin-bottom: 0;
+        /* Remove margin to avoid space between navbar and hero section */
+        z-index: 1000;
+        /* Ensure navbar stays on top */
+
+}
+
+.navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+}
+
+.navbar-brand .logo {
+        height: 40px;
+        /* Adjust the height to make the logo smaller */
+        margin-right: 10px;
+        /* Space between the logo and text */
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        /* Match background color style */
+        border-bottom: none;
+        /* Remove any bottom border */
+}
+
+.nav-link {
+        font-size: 1.1rem;
+}
+
+.nav-link.btn {
+        border-radius: 0.25rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+        color: #f8f9fa;
+}
+
+.navbar-nav .nav-link.active {
+        color: #fff !important;
+        background-color: #007bff;
+        border-radius: 5px;
+}
+
+
+/* Hero Section styling */
+.hero {
+        background: url('images/6.jpg') no-repeat center center;
+        background-size: cover;
+        color: #fff;
+        min-height: 100vh;
+        margin-top: 0px;
+        /* Full viewport height minus navbar height (56px for Bootstrap navbar) */
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        /* Padding for smaller screens */
+}
+
+.hero-content {
+        text-align: left;
+        /* Align text to the left */
+        max-width: 600px;
+        background: rgba(0, 0, 0, 0.5);
+        /* Optional: dark overlay for better text readability */
+        border-radius: 10px;
+        padding: 20px;
+        /* margin-left: 150px; */
+        /* Adjust margin to move the content slightly from the left edge */
+}
+
+
+.hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+}
+
+.hero-description {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+}
+
+.hero .btn {
+        font-size: 1.1rem;
+        padding: 10px 30px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 767px) {
+        .hero {
+                height: calc(100vh - 56px);
+                /* Adjust for smaller screens */
+        }
+
+        .hero-title {
+                font-size: 2rem;
+        }
+
+        .hero-description {
+                font-size: 1rem;
+        }
+}
+
+
+
+/* Categories Section styling */
+.categories {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        /* margin-top: 350px; */
+}
+
+.categories h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #343a40;
+        margin-bottom: 30px;
+}
+
+.card {
+        border: none;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+        border-bottom: 1px solid #dee2e6;
+        height: 200px;
+        object-fit: cover;
+}
+
+
+.card-body {
+        padding: 20px;
+        background: #fff;
+}
+
+.card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+}
+
+.card-text {
+        font-size: 1rem;
+        color: #6c757d;
+}
+
+.card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Gallery Section styling */
+.gallery {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+}
+
+.gallery h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #343a40;
+        margin-bottom: 30px;
+}
+
+.gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+}
+
+.gallery-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+        transform: scale(1.1);
+}
+
+.overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+}
+
+.overlay .text {
+        color: #fff;
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 20px;
+        max-width: 90%;
+
+}
+
+.gallery-item:hover .overlay {
+        opacity: 1;
+}
+
+
+
+
+
+/* Testimonials Section */
+.testimonials {
+        background-color: #f1f1f1;
+        color: #333;
+}
+
+.testimonials h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #343a40;
+        margin-bottom: 40px;
+}
+
+.testimonial-item {
+        text-align: center;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+}
+
+.testimonial-img {
+        margin-bottom: 20px;
+}
+
+.testimonial-img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-content {
+        padding-top: 20px;
+}
+
+.testimonial-content h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+}
+
+.testimonial-text {
+        font-size: 1.1rem;
+        font-style: italic;
+        color: #555;
+}
+
+/* .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #333;
+        border-radius: 50%;
+    } */
+
+/* Adjust Carousel Control Icons */
+.carousel-control-prev,
+.carousel-control-next {
+        width: 5%;
+        /* Reduce the width of the control area */
+        top: 50%;
+        /* Center the controls vertically */
+        transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+        width: 30px;
+        /* Adjust the size of the icons */
+        height: 30px;
+        /* Adjust the size of the icons */
+        background-color: #333;
+        /* Ensure the icons are visible */
+        border-radius: 50%;
+}
+
+.carousel-control-prev {
+        left: -60px;
+        /* Position the left control outside the text area */
+}
+
+.carousel-control-next {
+        right: -60px;
+        /* Position the right control outside the text area */
+}
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+        background-color: #343a40;
+        color: #f8f9fa;
+        padding: 40px 0;
+        margin-top: 50px;
+}
+
+.footer h5 {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #fff;
+}
+
+.footer p,
+.footer ul,
+.footer li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+}
+
+.footer-description {
+        max-width: 250px;
+}
+
+.footer a {
+        color: #f8f9fa;
+        text-decoration: none;
+        transition: color 0.3s;
+}
+
+.footer a:hover {
+        color: #adb5bd;
+}
+
+.footer .social-icons {
+        display: flex;
+        gap: 15px;
+}
+
+.footer .social-icons a {
+        font-size: 1.2rem;
+        color: #f8f9fa;
+        transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+        color: #adb5bd;
+        transform: scale(1.1);
+}
+
+
+
+.footer .fas,
+.footer .fab {
+        margin-right: 10px;
+}
+
+.footer hr {
+        border-top: 1px solid #495057;
+}
+
+.footer p {
+        margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Us Hero Section */
+.about-hero {
+        background: url('images/') no-repeat center center/cover;
+        color: #fff;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 15px;
+        position: relative;
+        margin-top: 80px;
+        /* Adjust this value if your navbar height is different */
+        z-index: 1;
+        /* Ensure the hero section is above the navbar */
+        background-blur: 8px;
+        /* Optional: Add a blur effect to the background */
+
+}
+
+.about-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #fff;
+        /* Ensure the text is white for visibility */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+        /* Add shadow for better readability */
+}
+
+.about-hero p {
+        font-size: 1.25rem;
+        max-width: 600px;
+}
+
+.about-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* Add a dark overlay */
+        z-index: 1;
+}
+
+.about-hero .container {
+        position: relative;
+        z-index: 2;
+        /* Ensure text is above the overlay */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+/* Our Story Section */
+.our-story {
+        padding: 50px 0;
+        background-color: #f8f9fa;
+}
+
+.our-story h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+}
+
+.our-story img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+}
+
+.our-story p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-top: 20px;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+        padding: 50px 0;
+        background-color: #fff;
+}
+
+.mission-vision h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #343a40;
+}
+
+.mission-vision .mission,
+.mission-vision .vision {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+        text-align: center;
+        transition: all 0.3s ease;
+}
+
+.mission-vision .mission:hover,
+.mission-vision .vision:hover {
+        background-color: #e9ecef;
+                transform: translateY(-5px);
+        }
+
+.mission-vision h3 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+}
+
+.mission-vision p {
+        font-size: 1.1rem;
+        color: #555;
+}
+
+/* Meet the Team Section */
+.team {
+        padding: 50px 0;
+        background-color: #f8f9fa;
+}
+
+.team h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #343a40;
+}
+
+.team .card {
+        transition: all 0.3s ease;
+        background-color: #fff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.team .card:hover {
+        transform: translateY(-10px);
+}
+
+.team .card-img-top {
+        max-height: 150px;
+        max-width: 150px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #343a40;
+        margin-bottom: 10px;
+}
+
+.team .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        text-align: center;
+}
+
+
+
+/* Library Features Section */
+.library-features {
+        padding: 50px 0;
+        background-color: #fff;
+}
+
+.library-features h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #343a40;
+}
+
+.library-features .feature {
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+        transition: all 0.3s ease;
+}
+
+.library-features .feature:hover {
+        background-color: #e9ecef;
+        transform: translateY(-5px);
+}
+
+.library-features i {
+        font-size: 3rem;
+        color: #007bff;
+        margin-bottom: 20px;
+}
+
+.library-features h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 15px;
+}
+
+.library-features p {
+        font-size: 1.1rem;
+        color: #555;
+}
+
+/* Footer Section */
+.footer {
+        background-color: #343a40;
+        color: #f8f9fa;
+        padding: 40px 0;
+        margin-top: 50px;
+}
+
+.footer h5 {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #fff;
+}
+
+.footer p,
+.footer ul,
+.footer li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+}
+
+.footer-description {
+        max-width: 250px;
+}
+
+.footer a {
+        color: #f8f9fa;
+        text-decoration: none;
+        transition: color 0.3s;
+}
+
+.footer a:hover {
+        color: #adb5bd;
+}
+
+.footer .social-icons {
+        display: flex;
+        gap: 15px;
+}
+
+.footer .social-icons a {
+        font-size: 1.2rem;
+        color: #f8f9fa;
+        transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+        color: #adb5bd;
+        transform: scale(1.1);
+}
+
+.footer .fas,
+.footer .fab {
+        margin-right: 10px;
+}
+
+.footer hr {
+        border-top: 1px solid #495057;
+}
+
+.footer p {
+        margin-bottom: 0;
+}
+
+
+
+
+
+/* Books Hero Section */
+.books-hero {
+        background: url('images/user2.jpg') no-repeat center center/cover;
+        color: #EEEEEE;
+        /* Light grey text color */
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 15px;
+        position: relative;
+        margin-top: 80px;
+        /* Adjust this value if your navbar height is different */
+        z-index: 1;
+}
+
+.books-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        /* Dark overlay to enhance text visibility */
+        z-index: 1;
+}
+
+.books-hero .container {
+        position: relative;
+        z-index: 2;
+        /* Ensure text is above the overlay */
+}
+
+.books-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #EEEEEE;
+        /* Light grey for the title */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.books-hero p {
+        font-size: 1.25rem;
+        color: #EEEEEE;
+        /* Light grey for the subtitle */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        /* Shadow to improve readability */
+}
+
+/* Search and Filter Section */
+.search-filter {
+        padding: 30px 0;
+        background-color: #134B70;
+        /* Dark blue background */
+        color: #EEEEEE;
+        /* Light grey text color */
+}
+
+.search-filter form {
+        max-width: 800px;
+        margin: auto;
+}
+
+.search-filter input,
+.search-filter select {
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+}
+
+.search-filter button {
+        background-color: #201E43;
+        /* Deep navy blue button */
+        color: #EEEEEE;
+        /* Light grey text on button */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+}
+
+.search-filter button:hover {
+        background-color: #508C9B;
+        /* Light teal hover effect */
+}
+
+/* Books Grid Section */
+.books-grid {
+        padding: 50px 0;
+        background-color: #EEEEEE;
+        /* Light grey background */
+}
+
+.book-card {
+        background-color: #FFFFFF;
+        /* White background */
+        border: 1px solid #134B70;
+        /* Dark blue border */
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+}
+
+.book-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+}
+
+.book-info {
+        padding: 20px;
+}
+
+.book-title {
+        font-size: 1.5rem;
+        color: #201E43;
+        /* Deep navy blue for title */
+        margin-bottom: 10px;
+}
+
+.book-author {
+        font-size: 1.1rem;
+        color: #508C9B;
+        /* Light teal for author */
+        margin-bottom: 15px;
+}
+
+.book-description {
+        font-size: 1rem;
+        color: #555;
+        /* Light grey for description */
+        margin-bottom: 20px;
+}
+
+.btn-secondary {
+        background-color: #201E43;
+        /* Deep navy blue button */
+        color: #EEEEEE;
+        /* Light grey text on button */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+        background-color: #508C9B;
+        /* Light teal hover effect */
+}
+
+/* Pagination Section */
+.pagination {
+        padding: 20px 0;
+        background-color: #134B70;
+        /* Dark blue background */
+}
+
+.pagination .page-item {
+        margin: 0 2px;
+}
+
+.pagination .page-link {
+        color: #EEEEEE;
+        /* Light grey color for pagination links */
+        background-color: transparent;
+        border: 1px solid #134B70;
+        /* Dark blue border */
+        border-radius: 5px;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination .page-link:hover,
+.pagination .page-item.active .page-link {
+        background-color: #201E43;
+        /* Deep navy blue background on hover or active */
+        color: #EEEEEE;
+        /* Light grey text on hover or active */
+        border-color: #201E43;
+        /* Deep navy blue border on hover or active */
+}
+
+.pagination .page-item.disabled .page-link {
+        color: #7d7d7d;
+        /* Grey color for disabled state */
+        border-color: #7d7d7d;
+        /* Grey border for disabled state */
+        cursor: not-allowed;
+        /* Change cursor to not-allowed */
+}
+
+
+
+
+
+
+
+/* Popup Styles */
+.popup {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1000;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Darker overlay */
+        backdrop-filter: blur(5px);
+        /* Slight blur effect */
+}
+
+/* Popup Content Styles */
+.popup-content {
+        background-color: #fff;
+        margin: 10% auto;
+        /* Centered vertically and horizontally */
+        padding: 30px;
+        border-radius: 10px;
+        width: 90%;
+        /* Full width with some margin */
+        max-width: 400px;
+        /* Max width for better readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* Soft shadow */
+        position: relative;
+        animation: fadeIn 0.3s ease-out;
+        /* Smooth fade-in effect */
+}
+
+/* Close Button Styles */
+.close-btn {
+        color: #888;
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+        color: #000;
+        /* Darker color on hover */
+}
+
+/* Heading Styles */
+.popup-content h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+}
+
+/* Tab Button Styles */
+.form-tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+}
+
+.tab-btn {
+        flex: 1;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 12px 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.tab-btn.active {
+        background-color: #508C9B;
+        color: #fff;
+        border-color: #508C9B;
+}
+
+/* Tab Button Hover Styles */
+.tab-btn:hover {
+        background-color: #e0e0e0;
+}
+
+/* Form Section Styles */
+.form-section {
+        display: none;
+}
+
+.form-section.active {
+        display: block;
+}
+
+/* Form Styles */
+.form-group {
+        margin-bottom: 20px;
+}
+
+.form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #555;
+}
+
+.form-group input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+        border-color: #508C9B;
+        /* Change border color on focus */
+        outline: none;
+}
+
+/* Button Styles */
+button[type="submit"] {
+        background-color: #508C9B;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+}
+
+button[type="submit"]:hover {
+        background-color: #134B70;
+        /* Darker button color on hover */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+        from {
+                opacity: 0;
+        }
+
+        to {
+                opacity: 1;
+        }
+}
+
+
+
+
+
+
+
+
+
+/* Main Content Styling */
+.contact-section {
+        display: flex;
+        align-items: center;
+        /* Center vertically */
+        justify-content: center;
+        /* Center horizontally */
+        min-height: 100vh;
+        /* Full viewport height */
+        padding: 80px 0;
+        background-color: #e9ecef;
+}
+
+.contact-section .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        /* Adjust as needed */
+}
+
+.contact-section h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #201E43;
+        text-align: center;
+        margin-bottom: 40px;
+}
+
+.contact-form-wrapper {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-wrapper h2 {
+        font-size: 1.8rem;
+        color: #201E43;
+        margin-bottom: 20px;
+        font-weight: 600;
+}
+
+.contact-form-wrapper p {
+        font-size: 1.1rem;
+        color: #6c757d;
+        margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+        margin-bottom: 20px;
+}
+
+.contact-form label {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+}
+
+.contact-form .form-control {
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        padding: 12px;
+        font-size: 1rem;
+}
+
+.contact-form textarea {
+        resize: vertical;
+}
+
+.contact-form button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+        background-color: #0056b3;
+}
+
+
+
+
+/* Books Section Styling */
+.books-section {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+}
+
+.books-section h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #201E43;
+        text-align: center;
+        margin-bottom: 40px;
+}
+
+.book-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+}
+
+.book-details {
+        padding: 20px;
+}
+
+.book-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #201E43;
+}
+
+.book-author {
+        font-size: 1.1rem;
+        color: #6c757d;
+        margin-bottom: 10px;
+}
+
+.book-description {
+        font-size: 0.95rem;
+        color: #6c757d;
+        margin-bottom: 20px;
+}
+
+.book-card .btn {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        transition: background-color 0.3s;
+}
+
+.book-card .btn:hover {
+        background-color: #0056b3;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library Management System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Add this in the <head> section if Font Awesome is not included -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
+</head>
+
+<body>
+        <!-- Navbar with Logo -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                        <!-- Navbar Brand with Logo -->
+                        <a class="navbar-brand" href="#">
+                                <img src="images/gls_logo.jpg" alt="LibrarySystem Logo" class="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="about.html">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="books.html">Our Books</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link btn btn-light text-primary"
+                                                        href="login.html">Login</a>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero d-flex align-items-center">
+                <div class="hero-content mx-md-5 mx-3">
+                        <h1 class="hero-title">The Best Library That Every Book Lover Must Visit</h1>
+                        <p class="hero-description">Explore a vast collection of books and resources in a serene and
+                                inspiring environment. Our library is designed to meet to all your reading and learning
+                                needs,
+                                provide a comfortable space for you to enjoy and study.</p>
+                        <a href="books.html" class="btn btn-light btn-lg">Browse Books</a>
+                </div>
+        </header>
+
+
+        <!-- Categories Section -->
+        <section class="categories py-5">
+                <div class="container">
+                        <h2 class="text-center mb-4">Book Categories</h2>
+                        <div class="row">
+                                <!-- Category Card 1 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="card shadow-sm border-0">
+                                                <img src="images/oxana-melis-P0FrzZVB7DE-unsplash.jpg"
+                                                        class="card-img-top" alt="Category 1">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Fiction</h5>
+                                                        <p class="card-text">Dive into a world of imagination and
+                                                                creativity with our extensive collection of fiction
+                                                                books.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Category Card 2 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="card shadow-sm border-0">
+                                                <img src="images/pexels-pixabay-60582.jpg" class="card-img-top"
+                                                        alt="Category 2">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Non-Fiction</h5>
+                                                        <p class="card-text">Discover our collection of non-fiction
+                                                                books that offer true stories and detailed insights into
+                                                                various real-world topics.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Category Card 3 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="card shadow-sm border-0">
+                                                <img src="images/pexels-pixabay-415071.jpg" class="card-img-top"
+                                                        alt="Category 3">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Science</h5>
+                                                        <p class="card-text">Enhance your knowledge with our collection
+                                                                of science books covering various fields and topics.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Category Card 4 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="card shadow-sm border-0">
+                                                <img src="images/pexels-pixabay-60582.jpg" class="card-img-top"
+                                                        alt="Category 4">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Coding</h5>
+                                                        <p class="card-text">Explore our collection of coding books to
+                                                                enhance your programming skills and dive into the world
+                                                                of technology and software development.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Category Card 5 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="card shadow-sm border-0">
+                                                <img src="images/pexels-pixabay-415071.jpg" class="card-img-top"
+                                                        alt="Category 5">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Management</h5>
+                                                        <p class="card-text">Discover our range of management books to
+                                                                learn effective strategies for leading teams, making
+                                                                decisions, and improving your business skills.
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Category Card 6 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="card shadow-sm border-0">
+                                                <img src="images/pexels-pixabay-60582.jpg" class="card-img-top"
+                                                        alt="Category 6">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Law</h5>
+                                                        <p class="card-text">Explore our selection of law books to
+                                                                understand legal principles, case studies, and the inner
+                                                                workings of the justice system.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+
+
+        <!-- Gallery Section -->
+        <section class="gallery py-5">
+                <div class="container">
+                        <h2 class="text-center mb-4">Library Gallery</h2>
+                        <div class="row">
+                                <!-- Gallery Item 1 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="gallery-item">
+                                                <img src="images/4.jpg" class="img-fluid" alt="Gallery Image 1">
+                                                <div class="overlay">
+                                                        <div class="text">Find Your Next Read: <br><br>Explore our
+                                                                extensive library collection, where you can find a wide
+                                                                range of books and resources in a comfortable setting.
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Gallery Item 2 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="gallery-item">
+                                                <img src="images/2.jpg" class="img-fluid" alt="Gallery Image 2">
+                                                <div class="overlay">
+                                                        <div class="text">Explore Our Library: <br><br>Browse through a
+                                                                vast collection of books and resources tailored to your
+                                                                interests, all in a welcoming environment.</div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Gallery Item 3 -->
+                                <div class="col-md-4 mb-4">
+                                        <div class="gallery-item">
+                                                <img src="images/3.jpg" class="img-fluid" alt="Gallery Image 3">
+                                                <div class="overlay">
+                                                        <div class="text">Your Reading Haven: <br><br>Discover a diverse
+                                                                selection of books and enjoy a cozy space designed to
+                                                                enhance your reading and learning experience.</div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Add more gallery items as needed -->
+                        </div>
+                </div>
+        </section>
+
+
+
+
+        <!-- What Others Are Saying Section -->
+        <section class="testimonials py-5">
+                <div class="container">
+                        <h2 class="text-center mb-5">What others are "Saying" about our Library</h2>
+                        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                        <!-- Testimonial 1 -->
+                                        <div class="carousel-item active">
+                                                <div class="testimonial-item">
+                                                        <div class="row">
+                                                                <div class="col-lg-4 col-md-5">
+                                                                        <div class="testimonial-img">
+                                                                                <img src="images/aditya.png"
+                                                                                        class="img-fluid rounded-circle"
+                                                                                        alt="User 1">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-lg-8 col-md-7">
+                                                                        <div class="testimonial-content">
+                                                                                <h4>Aditya Rajput</h4>
+                                                                                <p class="testimonial-text">"As a coding
+                                                                                        student, I appreciate how this
+                                                                                        library offers a wide range of
+                                                                                        tech books and a peaceful area
+                                                                                        to work on my coding skills."
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <!-- Testimonial 2 -->
+                                        <div class="carousel-item">
+                                                <div class="testimonial-item">
+                                                        <div class="row">
+                                                                <div class="col-lg-4 col-md-5">
+                                                                        <div class="testimonial-img">
+                                                                                <img src="images/user2.jpg"
+                                                                                        class="img-fluid rounded-circle"
+                                                                                        alt="User 2">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-lg-8 col-md-7">
+                                                                        <div class="testimonial-content">
+                                                                                <h4>Emily</h4>
+                                                                                <p class="testimonial-text">"I love the
+                                                                                        variety of books available
+                                                                                        here. The quiet environment and
+                                                                                        comfortable seating make it the
+                                                                                        perfect spot for long reading
+                                                                                        sessions."
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <!-- Testimonial 3 -->
+                                        <div class="carousel-item">
+                                                <div class="testimonial-item">
+                                                        <div class="row">
+                                                                <div class="col-lg-4 col-md-5">
+                                                                        <div class="testimonial-img">
+                                                                                <img src="images/jevin.png"
+                                                                                        class="img-fluid rounded-circle"
+                                                                                        alt="User 3">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-lg-8 col-md-7">
+                                                                        <div class="testimonial-content">
+                                                                                <h4>Jevin Kotak</h4>
+                                                                                <p class="testimonial-text">"A wonderful
+                                                                                        place to explore books and enjoy
+                                                                                        some quiet time. It’s easy to
+                                                                                        find what you’re looking for,
+                                                                                        and the environment is
+                                                                                        relaxing."</p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Carousel Controls -->
+                                <a class="carousel-control-prev" href="#testimonialCarousel" role="button"
+                                        data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#testimonialCarousel" role="button"
+                                        data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                </a>
+                        </div>
+                </div>
+        </section>
+
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer mt-5">
+                <div class="container">
+                        <div class="row">
+                                <!-- About Us -->
+                                <div class="col-md-4">
+                                        <h5>About</h5>
+                                        <p class="footer-description">
+                                                GLS Library is your gateway to a world of knowledge. With an extensive
+                                                collection of books and resources, we strive to promote learning and
+                                                literacy for all.
+                                        </p>
+                                </div>
+
+                                <!-- Quick Links -->
+                                <div class="col-md-2">
+                                        <h5>Quick Links</h5>
+                                        <ul class="list-unstyled">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="books.html">Our Books</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                </div>
+
+                                <!-- Contact Info -->
+                                <div class="col-md-3">
+                                        <h5>Contact Us</h5>
+                                        <ul class="list-unstyled">
+                                                <li><i class="fas fa-map-marker-alt"></i>Netaji Rd, Opp.Law Garden,</li>
+                                                <li>Ellisbridge, Ahmedabad,</li>
+                                                <li>Gujarat - 380006</li>
+                                                <li><i class="fas fa-phone" style="transform: rotate(90deg);"></i>079
+                                                        2644 0532</li>
+                                                <li><i class="fas fa-envelope"></i>inquiry@glsuniversity.ac.in</li>
+                                        </ul>
+                                </div>
+
+                                <!-- Social Media -->
+                                <div class="col-md-3">
+                                        <h5>Follow Us</h5>
+                                        <div class="social-icons">
+                                                <a href="https://www.facebook.com/GLSuniversity?fref=photo"
+                                                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://x.com/GlsUniversity" target="_blank"><i
+                                                                class="fab fa-twitter"></i></a>
+                                                <a href="https://www.instagram.com/glsuniversity/?hl=en"
+                                                        target="_blank"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.linkedin.com/school/glsuniversity/posts/?feedView=all"
+                                                        target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                                <div class="col-12 text-center">
+                                        <p class="mb-0">&copy; 2024 LibrarySystem. All Rights Reserved.</p>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+
+
+        <!-- Your other HTML content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js"></script> <!-- Your custom JS -->
+</body>
+
+</html>
