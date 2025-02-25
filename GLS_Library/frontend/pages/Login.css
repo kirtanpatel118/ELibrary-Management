@@ -1,0 +1,107 @@
+/* Login Css */
+/* Style for the login page */
+.login-body {
+        background: url(./images/6.jpg) no-repeat center center fixed;
+        /* Adjusted path for login background */
+        background-size: cover;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        /* Consistent font */
+}
+
+/* Card styling specific to the login */
+.login-card {
+        max-width: 420px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        /* Darker shadow for better contrast */
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.2);
+        /* Darker semi-transparent background */
+        margin-top: 60px;
+        /* Center horizontally */
+}
+
+
+
+/* Logo in the login card */
+.login-card-logo {
+        width: 50%;
+        display: block;
+        margin: 0 auto 20px;
+}
+
+/* Title in the login card */
+.login-card-title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #fff;
+        /* White text color for better visibility */
+}
+
+/* Form control styling for the login page */
+.login-form-control {
+        border-radius: 40px;
+        margin-bottom:8px;
+}
+
+/* Input group text styling for the login */
+.login-input-group-text {
+        background: transparent;
+        border: none;
+        color: #fff;
+        /* White text color */
+}
+
+/* Label text styling for the login form */
+.login-form-group label {
+        color: #fff;
+        /* White color for better contrast */
+        font-weight: 500;
+}
+
+/* Primary button styling for the login */
+.login-btn-primary {
+        background-color: #007BFF;
+        /* Visible color */
+        color: #fff;
+        /* White text for contrast */
+        font-weight: 600;
+        border-radius: 40px;
+        border: none;
+        /* Remove border */
+}
+
+.login-btn-primary:hover {
+        background-color: #0056b3;
+        /* Darker shade for hover */
+        color: #fff;
+        /* Ensure text remains white on hover */
+}
+
+/* Remember me and forgot password text styling for login */
+.login-form-check-label,
+.login-text-muted {
+        color: #bbb !important;
+        /* Light grey for better visibility */
+}
+
+/* Text-center link styling for login */
+.login-text-center {
+        color: #fff;
+        /* Ensure the text is white */
+        font-size: 14px;
+        /* Adjust font size for better readability */
+}
+
+.login-text-center a {
+        color: #00f;
+        /* Bright blue for visibility */
+}
+
+.login-text-center a:hover {
+        text-decoration: underline;
+}

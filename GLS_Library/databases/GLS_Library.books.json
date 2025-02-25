@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "67a492323bf6ffcb396f86c4"
+  },
+  "Category": "Law",
+  "Bookname": "ecddcds",
+  "Bookid": "ececescc26262",
+  "Author": "x d d d dd",
+  "Price": 2054555,
+  "Quantity": 11515,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1738838578/Books_Photos/ouh8fnpwnmxtrvjm1ped.jpg",
+    "public_id": "Books_Photos/ouh8fnpwnmxtrvjm1ped"
+  },
+  "__v": 0
+}]

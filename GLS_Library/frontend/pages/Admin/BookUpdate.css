@@ -1,0 +1,107 @@
+/* General Reset */
+.reset-style {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Form Container */
+    .update-book-form {
+        max-width: 600px;
+        margin: 50px auto;
+        margin-top:120px;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .update-book-form:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Form Heading */
+    .update-book-heading {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #201E43;
+    }
+    
+    /* Labels */
+    .update-book-label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #134b70;
+    }
+    
+    /* Input Fields */
+    .update-book-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #333;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease;
+    }
+    
+    .update-book-input:focus {
+        border-color: #134b70;
+        outline: none;
+    }
+    
+    /* Radio Buttons */
+    .update-book-radio {
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    
+    .update-book-radio-label {
+        display: inline-block;
+        font-weight: normal;
+        margin-right: 20px;
+        color: #444;
+        font-size: 1rem;
+    }
+    
+    /* Image Display */
+    .update-book-image {
+        max-width: 30%;
+        height: auto;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Submit Button */
+    .update-book-button {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: white;
+        background-color: #134b70;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .update-book-button:hover {
+        background-color: #508c9b;
+        transform: scale(1.03);
+    }
+    
+    /* Remove default spacing for <br> */
+    .update-book-spacer {
+        display: none;
+    }
+    

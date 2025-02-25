@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "67bd700d50511f0117de82c8"
+  },
+  "firstname": "Krupa",
+  "lastname": "Mehta",
+  "email": "krupamehta1@glsmca.com",
+  "mobileNo": "9632587411",
+  "faculty_id": "123",
+  "dateOfJoining": {
+    "$date": "2025-02-05T00:00:00.000Z"
+  },
+  "dateOfLeaving": {
+    "$date": "2027-06-25T00:00:00.000Z"
+  },
+  "password": "$2b$10$a8/b3I7LI4v8/O/LQFGHGev7OfXk58q9DL.6bHGwpC9G0A9NiZKBW",
+  "role": "faculty",
+  "createdAt": {
+    "$date": "2025-02-25T07:23:57.858Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T07:23:57.858Z"
+  },
+  "__v": 0
+}]

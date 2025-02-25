@@ -1,0 +1,151 @@
+import { useState } from 'react';
+import axios from 'axios';
+import { Navigate, useNavigate, Link } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
+import '../src/App.css'
+
+
+
+
+function Register() {
+  const [Ok, setOk] = useState(false);
+  const navigate = useNavigate();
+  
+
+  const [RegisterInputs, setRegisterInputs] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    mobileNo: '',
+    role:'',
+    course: '',
+    enrollment: '',
+    faculty_id:'',
+    dateOfJoining:'',
+    dateOfLeaving:'',
+    department_id:'',
+    password: '',
+    confirmPassword: ''
+  });
+
+  const handleOnChange = (e) => {
+    e.preventDefault();
+    setRegisterInputs({ ...RegisterInputs, [e.target.name]: e.target.value });
+  };
+
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    console.log(RegisterInputs);
+    
+    try {
+      const response = await axios.post('http://localhost:3000/user/register', RegisterInputs);
+      if (response.data.ok) {
+        toast.success('register Successfully!');
+        setOk(true);
+        console.log('Response from server:', response.data);
+        navigate('/login')
+      }
+    } catch (err) {
+      
+      toast.error(err.response?.data?.message);
+      console.error("something wrong")
+    }
+  };
+
+  return (
+    <>
+      {/* <h1>REgister</h1> */}
+      <form onSubmit={handleOnSubmit}>
+        first Name:<input type="text" name="firstname" value={RegisterInputs.firstname} onChange={handleOnChange} placeholder='enter your first name' />
+        <br></br>
+        lastname Name:<input type="text" name="lastname" value={RegisterInputs.lastname} onChange={handleOnChange} placeholder='enter your last name' />
+        <br></br>
+        email id:<input type='email' name='email' value={RegisterInputs.email} onChange={handleOnChange} placeholder='enter your emailid' />
+        <br></br>
+        mobile no:<input type='tel' name='mobileNo' value={RegisterInputs.mobileNo} onChange={handleOnChange} placeholder=' enter your mobile no' />
+        <br></br>
+        role:
+        <select name='role' value={RegisterInputs.role} onChange={handleOnChange}>
+          <option>please select your role</option>
+          <option value="student">student</option>
+          <option value="admin">admin</option>
+          <option value="faculty">faculty</option>
+        </select>
+
+
+
+        {RegisterInputs.role === 'student' && (
+          <>
+            Enrollment No:
+            <input type='text' name='enrollment' value={RegisterInputs.enrollment} onChange={handleOnChange} placeholder='Enter your enrollment no' />
+            <br />
+            Course:
+            <select name='course' value={RegisterInputs.course} onChange={handleOnChange}>
+              <option value="">Please select your course</option>
+              <option value="bba">BBA</option>
+              <option value="bca">BCA</option>
+              <option value="bcom">BCOM</option>
+              <option value="mba">MBA</option>
+              <option value="mca">MCA</option>
+              <option value="llb">LLB</option>
+              <option value="btech">BTech</option>
+            </select>
+            <br />
+          </>
+        )}
+        {RegisterInputs.role === 'faculty'  &&(
+          <>
+          faculty id:<input type='text' name='faculty_id' value={RegisterInputs.faculty_id} onChange={handleOnChange} placeholder='enter your facultyid' />
+          <br></br>
+          Date of Joining:<input type='date' name='dateOfJoining' value={RegisterInputs.dateOfJoining} onChange={handleOnChange} />
+          <br></br>
+          Date of Leaving:<input type='date' name='dateOfLeaving' value={RegisterInputs.dateOfLeaving} onChange={handleOnChange} />
+          <br></br>
+          Department id id:<input type='text' name='department_id' value={RegisterInputs.department_id} onChange={handleOnChange} placeholder='enter your departmentid' />
+          <br></br>
+
+          </>
+        )}
+        <br />
+
+        {/* Enrollment no:<input type='text' name='enrollment' value={RegisterInputs.enrollment} onChange={handleOnChange} placeholder=' enter your enrollment no' />
+        <br></br>
+        course:
+        <select name='course' value={RegisterInputs.course} onChange={handleOnChange}>
+          <option>please select your course</option>
+          <option value="bba">bba</option>
+          <option value="bca">bca</option>
+          <option value="bcom">bcom</option>
+          <option value="mba">mba</option>  
+          <option value="mca">mca</option>
+          <option value="llb">llb</option>
+          <option value="btech">btech</option>
+        </select>
+        <br></br> */}
+        
+        password:<input type='password' name='password' value={RegisterInputs.password} onChange={handleOnChange} placeholder='enter password' />
+        <br>
+        </br>
+        confirm password:<input type='password' name='confirmPassword' value={RegisterInputs.confirmPassword} onChange={handleOnChange} placeholder='enter password' />
+        <br>
+        </br>
+
+        <button type='submit' disabled={
+          !RegisterInputs.firstname ||
+          !RegisterInputs.lastname ||
+          !RegisterInputs.email ||
+          !RegisterInputs.mobileNo ||
+          (RegisterInputs.role === 'student' && (!RegisterInputs.enrollment || !RegisterInputs.course)) ||
+          (RegisterInputs.role === 'faculty' && (!RegisterInputs.faculty_id || !RegisterInputs.dateOfJoining || !RegisterInputs.dateOfLeaving || !RegisterInputs.department_id ))||
+          // !RegisterInputs.enrollment ||
+          // !RegisterInputs.course ||
+          !RegisterInputs.password ||
+          RegisterInputs.password !== RegisterInputs.confirmPassword
+        } >Submit</button>
+      </form>
+
+    </>
+  );
+}
+
+export default Register;

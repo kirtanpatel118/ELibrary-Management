@@ -1,0 +1,147 @@
+.book-request-wrapper {
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        background-color: #edeaea;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 90px;
+        margin-bottom: 30px;
+      }
+      
+      .book-request-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      
+      .book-request-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .form-group-title,
+      .form-group-author,
+      .form-group-genre,
+      .form-group-comments {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      
+      .form-label-title,
+      .form-label-author,
+      .form-label-genre,
+      .form-label-comments {
+        font-size: 16px;
+        font-weight: 600;
+        color: #555;
+      }
+      
+      .form-input-title,
+      .form-input-author,
+      .form-input-genre,
+      .form-textarea-comments {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+      
+      .form-input-title:focus,
+      .form-input-author:focus,
+      .form-input-genre:focus,
+      .form-textarea-comments:focus {
+        border-color: #007bff;
+      }
+      
+      .form-textarea-comments {
+        height: 100px;
+        resize: none;
+      }
+      
+      .form-button-submit {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .form-button-submit:hover {
+        background-color: #0056b3;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .book-request-wrapper {
+          padding: 15px;
+          margin-top: 60px;
+          margin-bottom: 20px;
+        }
+      
+        .book-request-title {
+          font-size: 20px;
+        }
+      
+        .form-label-title,
+        .form-label-author,
+        .form-label-genre,
+        .form-label-comments {
+          font-size: 14px;
+        }
+      
+        .form-input-title,
+        .form-input-author,
+        .form-input-genre,
+        .form-textarea-comments {
+          font-size: 13px;
+          padding: 8px;
+        }
+      
+        .form-button-submit {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .book-request-wrapper {
+          padding: 10px;
+          margin-top: 50px;
+        }
+      
+        .book-request-title {
+          font-size: 18px;
+        }
+      
+        .form-label-title,
+        .form-label-author,
+        .form-label-genre,
+        .form-label-comments {
+          font-size: 12px;
+        }
+      
+        .form-input-title,
+        .form-input-author,
+        .form-input-genre,
+        .form-textarea-comments {
+          font-size: 12px;
+          padding: 6px;
+        }
+      
+        .form-button-submit {
+          font-size: 12px;
+          padding: 6px 10px;
+        }
+      }
+      
