@@ -39,7 +39,6 @@ function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://maps.app.goo.gl/J5wsVDZtC5qm4Use6" target="_blank" rel="noopener noreferrer">
                                     <i className="fas fa-map-marker-alt"></i>Ellisbridge, Ahmedabad,
                                 </a>
                             </li>
