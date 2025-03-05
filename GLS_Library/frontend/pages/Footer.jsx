@@ -35,9 +35,9 @@ function Footer() {
                         <ul className="list-unstyled">
                             <li>
                                 <a href="https://maps.app.goo.gl/J5wsVDZtC5qm4Use6" target="_blank" rel="noopener noreferrer">
-                                    <i className="fas fa-map-marker-alt"></i>Netaji Rd, Opp.Law Garden,
-                                    <i className="fas fa-map-marker-alt"></i>Ellisbridge, Ahmedabad,
-                                    <i className="fas fa-map-marker-alt"></i>Gujarat - 380006
+                                    <i className="fas fa-map-marker-alt"></i>Netaji Road, Opp.Law Garden,
+                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ellisbridge, Ahmedabad,<br/>
+                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gujarat - 380006
                                 </a>
                             </li>
                             <li><i className="fas fa-phone" style={{ transform: 'rotate(90deg)'}}></i>079 2644 0532</li>
