@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://elibrary-management.vercel.app',
+    'https://e-library-management-mu.vercel.app',
     /\.vercel\.app$/
   ],
   credentials: true
