@@ -1,13 +1,5 @@
 const mongoose = require('mongoose');
 const express = require('express');
-require('dotenv').config();
-
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI).then(() => {
-    console.log("connected");
-  }).catch((err) => {
-    console.error("not connected", err.message);
-  });
 
 // Create a schema for the book data
 const bookSchema = new mongoose.Schema({

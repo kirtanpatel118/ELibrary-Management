@@ -2,7 +2,12 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const mongoose = require('mongoose');
 const User = require('./Model/Student');
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('Connected to MongoDB:', mongoose.connection.db.databaseName))
+  .catch((err) => console.error('MongoDB connection error:', err.message));
 const path = require('path');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
