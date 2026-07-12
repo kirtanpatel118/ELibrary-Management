@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 const express = require('express');
+require('dotenv').config();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/GLS_Library').then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log("connected");
   }).catch((err) => {
-    console.error("not connected");
+    console.error("not connected", err.message);
   });
 
 // Create a schema for the book data

@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "67c8328b1908963b4470df64"
+  },
+  "Category": "Programming",
+  "Bookname": "Blockchain Technology: Concepts and Applications",
+  "Bookid": "BT001",
+  "Author": "Kumar Saurabh, Ashutosh Saxena",
+  "Price": 750,
+  "Quantity": 4,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741173387/Books_Photos/fvka19ray6cso5yltaaz.jpg",
+    "public_id": "Books_Photos/fvka19ray6cso5yltaaz"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c8349d1908963b4470dfbd"
+  },
+  "Category": "Programming",
+  "Bookname": "Big Data Analytics: A Practical Approach",
+  "Bookid": "BDA002",
+  "Author": "Venkatesh Gauri Shankar, Bali Devi",
+  "Price": 850,
+  "Quantity": 15,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741173916/Books_Photos/amkscrx4eefbspgdxslv.jpg",
+    "public_id": "Books_Photos/amkscrx4eefbspgdxslv"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c835041908963b4470dfc5"
+  },
+  "Category": "Programming",
+  "Bookname": "Big Data: Concepts, Technology, and Architecture",
+  "Bookid": "BD003",
+  "Author": "Balamurugan Balusamy, Nandhini Abirami R., Sefedine Kadry, Amir H. Gandomi",
+  "Price": 900,
+  "Quantity": 12,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741174020/Books_Photos/srag68gdcqch9udmq12x.jpg",
+    "public_id": "Books_Photos/srag68gdcqch9udmq12x"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c835401908963b4470dfc7"
+  },
+  "Category": "Commerce",
+  "Bookname": "Business Laws (Semester-I)",
+  "Bookid": "BL004",
+  "Author": "Ashok Sharma",
+  "Price": 650,
+  "Quantity": 19,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741174080/Books_Photos/anahsm1mph22xd7b7tg7.jpg",
+    "public_id": "Books_Photos/anahsm1mph22xd7b7tg7"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c835761908963b4470dfc9"
+  },
+  "Category": "Programming",
+  "Bookname": "Modern C Programming: Language Advance",
+  "Bookid": "CP005",
+  "Author": "Vinod Sir",
+  "Price": 700,
+  "Quantity": 17,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741174134/Books_Photos/umbewu2euvx8kvkd4btw.jpg",
+    "public_id": "Books_Photos/umbewu2euvx8kvkd4btw"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c835d41908963b4470dfcb"
+  },
+  "Category": "Programming",
+  "Bookname": "Cloud Computing for B.E./B.Tech. VII Semester CSE/IT Branches",
+  "Bookid": "CC006",
+  "Author": "Dr. K. Saravanan, P. Koperna Sankar, N.P. Shanmugaramarasane",
+  "Price": 950,
+  "Quantity": 6,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741174227/Books_Photos/flfi0kqyhbauv69cjjoy.png",
+    "public_id": "Books_Photos/flfi0kqyhbauv69cjjoy"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c839661908963b4470e010"
+  },
+  "Category": "Programming",
+  "Bookname": "Design Patterns Explained",
+  "Bookid": "BK002",
+  "Author": "Alan Shalloway, James R. Trott",
+  "Price": 45,
+  "Quantity": 14,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741175142/Books_Photos/bifzo66ljbcvv4snos68.jpg",
+    "public_id": "Books_Photos/bifzo66ljbcvv4snos68"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c839d41908963b4470e012"
+  },
+  "Category": "Programming",
+  "Bookname": "Advanced Design Patterns",
+  "Bookid": "BK008",
+  "Author": "Sarah Williams",
+  "Price": 60,
+  "Quantity": 5,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741175251/Books_Photos/sp5hmebg87h98ipleg2s.jpg",
+    "public_id": "Books_Photos/sp5hmebg87h98ipleg2s"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c839eb1908963b4470e014"
+  },
+  "Category": "Programming",
+  "Bookname": "Advanced Design Patterns",
+  "Bookid": "BK008",
+  "Author": "Sarah Williams",
+  "Price": 60,
+  "Quantity": 5,
+  "BookPhoto": {
+    "url": "https://res.cloudinary.com/ddnaatmvw/image/upload/v1741175275/Books_Photos/iebxnn1b69sbuwlabspm.jpg",
+    "public_id": "Books_Photos/iebxnn1b69sbuwlabspm"
+  },
+  "__v": 0
+}]

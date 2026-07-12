@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "67bd6d9750511f0117de827e"
+  },
+  "firstname": "Kirtan",
+  "lastname": "Patel",
+  "email": "kirtan.glsbca20@gmail.com",
+  "mobileNo": "8980768966",
+  "role": "admin",
+  "password": "$2b$10$SrRSOObDTfCj5lpKIZj2nOdnE8wldZY2kVjIC0fNHm4wvv5nYAsQq",
+  "createdAt": {
+    "$date": "2025-02-25T07:13:27.086Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T07:13:27.086Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "67c8376a1908963b4470dffd"
+  },
+  "name": "Kirtan K",
+  "email": "kirtan.glsbca20@gmail.com",
+  "message": "kjsxsnknskmmxmz",
+  "createdAt": {
+    "$date": "2025-03-05T11:37:14.648Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-05T11:37:14.648Z"
+  },
+  "__v": 0
+}]

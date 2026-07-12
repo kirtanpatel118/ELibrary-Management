@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "67bf22779889704cad993eb5"
+  },
+  "userId": {
+    "$oid": "67bd6eaf50511f0117de8285"
+  },
+  "bookId": {
+    "$oid": "67a492323bf6ffcb396f86c4"
+  },
+  "returned": true,
+  "issuedAt": {
+    "$date": "2025-02-26T14:17:27.375Z"
+  },
+  "returnBy": {
+    "$date": "2025-03-13T14:17:27.375Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67bf22bd9889704cad993edd"
+  },
+  "userId": {
+    "$oid": "67bd6eaf50511f0117de8285"
+  },
+  "bookId": {
+    "$oid": "67a492323bf6ffcb396f86c4"
+  },
+  "returned": false,
+  "issuedAt": {
+    "$date": "2025-02-26T14:18:37.173Z"
+  },
+  "returnBy": {
+    "$date": "2025-03-13T14:18:37.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c837391908963b4470dff0"
+  },
+  "userId": {
+    "$oid": "67bd6d9750511f0117de827e"
+  },
+  "bookId": {
+    "$oid": "67c835d41908963b4470dfcb"
+  },
+  "returned": false,
+  "issuedAt": {
+    "$date": "2025-03-05T11:36:25.897Z"
+  },
+  "returnBy": {
+    "$date": "2025-03-20T11:36:25.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c837581908963b4470dffb"
+  },
+  "userId": {
+    "$oid": "67bd6eaf50511f0117de8285"
+  },
+  "bookId": {
+    "$oid": "67c835d41908963b4470dfcb"
+  },
+  "returned": false,
+  "issuedAt": {
+    "$date": "2025-03-05T11:36:56.113Z"
+  },
+  "returnBy": {
+    "$date": "2025-03-20T11:36:56.113Z"
+  },
+  "__v": 0
+}]
