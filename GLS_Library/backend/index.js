@@ -19,6 +19,8 @@ app.use(cors({
 }));
 
 
+app.get('/', (req, res) => res.json({ ok: true, message: 'GLS Library API is running' }));
+
 app.use('/user',user);
 app.use('/admin',admin);
 app.use('/faculty',faculty);
