@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom'; // Ensure you have react-router-dom installed
 import './ForgotPassword.css'; // Import the CSS file for the Forgot Password page
@@ -76,7 +76,7 @@ function ForgotPassword() {
     <div className="forgot-password-body">
       <div className="forgot-password-card">
         <img
-          src="images/gls_logo.jpg"
+          src="/images/gls_logo.jpg"
           alt="Logo"
           className="forgot-password-card-logo"
         />

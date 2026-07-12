@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -126,7 +126,7 @@ function Register() {
     <div className="signup-body">
       <div className="signup-wrapper">
         <form onSubmit={handleOnSubmit}>
-          <img src="images/gls_logo.jpg" alt="Logo" className="login-card-logo" />
+          <img src="/images/gls_logo.jpg" alt="Logo" className="login-card-logo" />
           <h1>Register</h1>
           
           <div className="signup-input-box">

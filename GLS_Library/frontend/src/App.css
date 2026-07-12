@@ -293,7 +293,7 @@ body {
 
 /* Hero Section styling */
 .hero {
-        background: url('images/6.jpg') no-repeat center center;
+        background: url('/images/6.jpg') no-repeat center center;
         background-size: cover;
         color: #fff;
         min-height: 100vh;
@@ -564,7 +564,7 @@ body {
 
 /* Books Hero Section */
 .books-hero {
-        background: url('images/user2.jpg') no-repeat center center/cover;
+        background: url('/images/user2.jpg') no-repeat center center/cover;
         color: #EEEEEE;
         /* Light grey text color */
         height: 60vh;

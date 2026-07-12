@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../Context/AuthProvider';
 import { useNavigate, Link } from 'react-router-dom';
@@ -127,7 +127,7 @@ function Login() {
             <div className="container d-flex justify-content-center align-items-center min-vh-100">
               <div className="card login-card">
                 <div className="login-card-body">
-                  <img src="images/gls_logo.jpg" alt="Logo" className="login-card-logo" />
+                  <img src="/images/gls_logo.jpg" alt="Logo" className="login-card-logo" />
                   <h1 className="login-card-title">Login</h1>
                   
                   <div className="form-group">

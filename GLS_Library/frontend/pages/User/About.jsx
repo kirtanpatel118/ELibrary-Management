@@ -69,7 +69,7 @@ function About() {
                         <div className="row">
                         <div className="col-md-4 mb-4">
                                         <div className="card border-0 shadow-sm">
-                                                <img src="images/krupamam.jpg" className="card-img-top rounded-circle"
+                                                <img src="/images/krupamam.jpg" className="card-img-top rounded-circle"
                                                         alt="Team Member 3"/>
                                                 <div className="card-body">
                                                         <h5 className="card-title">Dr. Krupa Mehta</h5>
@@ -81,7 +81,7 @@ function About() {
                                 {/* <!-- Team Member 1 --> */}
                                 <div className="col-md-4 mb-4">
                                         <div className="card border-0 shadow-sm">
-                                               <a href="https://www.linkedin.com/in/dhanrajsinh-dabhi/" target="_blank" rel="noopener noreferrer"> <img src="images/dhanraj.png" className="card-img-top rounded-circle"
+                                               <a href="https://www.linkedin.com/in/dhanrajsinh-dabhi/" target="_blank" rel="noopener noreferrer"> <img src="/images/dhanraj.png" className="card-img-top rounded-circle"
                                                         alt="Team Member 1" /></a>
                                                 <div className="card-body">
                                                         <h5 className="card-title">Dhanrajsinh Dabhi</h5>
@@ -97,7 +97,7 @@ function About() {
                                 {/* <!-- Team Member 2 --> */}
                                 <div className="col-md-4 mb-4">
                                         <div className="card border-0 shadow-sm">
-                                                <img src="images/kirtan.png" className="card-img-top rounded-circle"
+                                                <img src="/images/kirtan.png" className="card-img-top rounded-circle"
                                                         alt="Team Member 2" />
                                                 <div className="card-body">
                                                         <h5 className="card-title">Kirtan Kalathiya</h5>
@@ -112,7 +112,7 @@ function About() {
                                 {/* <!-- Team Member 3 --> */}
                                 <div className="col-md-4 mb-4">
                                         <div className="card border-0 shadow-sm">
-                                                <img src="images/manish.png" className="card-img-top rounded-circle"
+                                                <img src="/images/manish.png" className="card-img-top rounded-circle"
                                                         alt="Team Member 3" />
                                                 <div className="card-body">
                                                         <h5 className="card-title">Manish Makawana</h5>
@@ -125,7 +125,7 @@ function About() {
                                 </div>
                                 <div className="col-md-4 mb-4">
                                         <div className="card border-0 shadow-sm">
-                                                <img src="images/Meet.png" className="card-img-top rounded-circle"
+                                                <img src="/images/Meet.png" className="card-img-top rounded-circle"
                                                         alt="Team Member 3" />
                                                 <div className="card-body">
                                                         <h5 className="card-title">Meet Pattani</h5>
@@ -139,7 +139,7 @@ function About() {
                                 </div>
                                 <div className="col-md-4 mb-4">
                                         <div className="card border-0 shadow-sm">
-                                                <img src="images/kishor.jpg" className="card-img-top rounded-circle"
+                                                <img src="/images/kishor.jpg" className="card-img-top rounded-circle"
                                                         alt="Team Member 3"/>
                                                 <div className="card-body">
                                                         <h5 className="card-title">Kishor Suthar</h5>

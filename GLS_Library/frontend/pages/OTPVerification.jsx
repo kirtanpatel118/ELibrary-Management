@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate, Link } from 'react-router-dom';
@@ -60,7 +60,7 @@ function OTPVerification() {
     <div className="otp-body">
       <Toaster position="top-center" />
       <div className="otp-card">
-        <img src="images/gls_logo.jpg" alt="GLS Logo" className="otp-logo" />
+        <img src="/images/gls_logo.jpg" alt="GLS Logo" className="otp-logo" />
         <h2 className="otp-title">OTP Verification</h2>
         <p className="otp-subtitle">
           {isOtpSent

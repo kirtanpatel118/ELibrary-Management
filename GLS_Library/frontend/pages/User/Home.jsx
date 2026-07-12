@@ -149,7 +149,7 @@ function Home() {
             {/* <!-- Category Card 1 --> */}
             <div className="col-md-4 mb-4">
               <div className="card shadow-sm border-0">
-                <img src="images/oxana-melis-P0FrzZVB7DE-unsplash.jpg"
+                <img src="/images/oxana-melis-P0FrzZVB7DE-unsplash.jpg"
                   className="card-img-top" alt="Category 1" />
                 <div className="card-body">
                   <h5 className="card-title">Computer Science</h5>
@@ -162,7 +162,7 @@ function Home() {
             {/* <!-- Category Card 2 --> */}
             <div className="col-md-4 mb-4">
               <div className="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-60582.jpg" className="card-img-top"
+                <img src="/images/pexels-pixabay-60582.jpg" className="card-img-top"
                   alt="Category 2" />
                 <div className="card-body">
                   <h5 className="card-title">Design</h5>
@@ -174,7 +174,7 @@ function Home() {
             {/* <!-- Category Card 3 --> */}
             <div className="col-md-4 mb-4">
               <div className="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-415071.jpg" className="card-img-top"
+                <img src="/images/pexels-pixabay-415071.jpg" className="card-img-top"
                   alt="Category 3" />
                 <div className="card-body">
                   <h5 className="card-title">Management</h5>
@@ -186,7 +186,7 @@ function Home() {
             {/* <!-- Category Card 4 --> */}
             <div className="col-md-4 mb-4">
               <div className="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-60582.jpg" className="card-img-top"
+                <img src="/images/pexels-pixabay-60582.jpg" className="card-img-top"
                   alt="Category 4" />
                 <div className="card-body">
                   <h5 className="card-title">Law</h5>
@@ -199,7 +199,7 @@ function Home() {
             {/* <!-- Category Card 5 --> */}
             <div className="col-md-4 mb-4">
               <div className="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-415071.jpg" className="card-img-top"
+                <img src="/images/pexels-pixabay-415071.jpg" className="card-img-top"
                   alt="Category 5" />
                 <div className="card-body">
                   <h5 className="card-title">Commerce</h5>
@@ -212,7 +212,7 @@ function Home() {
             {/* <!-- Category Card 6 --> */}
             <div className="col-md-4 mb-4">
               <div className="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-60582.jpg" className="card-img-top"
+                <img src="/images/pexels-pixabay-60582.jpg" className="card-img-top"
                   alt="Category 6" />
                 <div className="card-body">
                   <h5 className="card-title">Travel</h5>
@@ -233,7 +233,7 @@ function Home() {
             {/* <!-- Gallery Item 1 --> */}
             <div className="col-md-4 mb-4">
               <div className="gallery-item">
-                <img src="images/4.jpg" className="img-fluid" alt="Gallery Image 1" />
+                <img src="/images/4.jpg" className="img-fluid" alt="Gallery Image 1" />
                 <div className="overlay" >
                   <div className="text">Find Your Next Read: <br/><br/>Explore our
                                                                 extensive library collection, where you can find a wide
@@ -244,7 +244,7 @@ function Home() {
             {/* <!-- Gallery Item 2 --> */}
             <div className="col-md-4 mb-4">
               <div className="gallery-item">
-                <img src="images/2.jpg" className="img-fluid" alt="Gallery Image 2" />
+                <img src="/images/2.jpg" className="img-fluid" alt="Gallery Image 2" />
                 <div className="overlay" >
                   <div className="text">Explore Our Library: <br/><br/>Browse through a
                                                                 vast collection of books and resources tailored to your
@@ -255,7 +255,7 @@ function Home() {
             {/* <!-- Gallery Item 3 --> */}
             <div className="col-md-4 mb-4">
               <div className="gallery-item">
-                <img src="images/3.jpg" className="img-fluid" alt="Gallery Image 3" />
+                <img src="/images/3.jpg" className="img-fluid" alt="Gallery Image 3" />
                 <div className="overlay" >
                   <div className="text">Your Reading Haven: <br/><br/>Discover a diverse
                                                                 selection of books and enjoy a cozy space designed to
@@ -284,7 +284,7 @@ function Home() {
                                                         <div className="row">
                                                                 <div className="col-lg-4 col-md-5">
                                                                         <div className="testimonial-img">
-                                                                                <img src="images/aditya.png"
+                                                                                <img src="/images/aditya.png"
                                                                                         className="img-fluid rounded-circle"
                                                                                         alt="User 1" />
                                                                         </div>
@@ -308,7 +308,7 @@ function Home() {
                                                         <div className="row">
                                                                 <div className="col-lg-4 col-md-5">
                                                                         <div className="testimonial-img">
-                                                                                <img src="images/user2.jpg"
+                                                                                <img src="/images/user2.jpg"
                                                                                         className="img-fluid rounded-circle"
                                                                                         alt="User 2" />
                                                                         </div>
@@ -334,7 +334,7 @@ function Home() {
                                                         <div className="row">
                                                                 <div className="col-lg-4 col-md-5">
                                                                         <div className="testimonial-img">
-                                                                                <img src="images/jevin.png"
+                                                                                <img src="/images/jevin.png"
                                                                                         className="img-fluid rounded-circle"
                                                                                         alt="User 3" />
                                                                         </div>
