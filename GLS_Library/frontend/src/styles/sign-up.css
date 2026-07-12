@@ -1,6 +1,6 @@
 /* Register Page Styling */
 .signup-body {
-    background: url(./images/6.jpg) no-repeat center center fixed;
+    background: url(/images/6.jpg) no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;

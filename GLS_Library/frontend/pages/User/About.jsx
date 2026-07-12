@@ -34,7 +34,7 @@ function About() {
                                                 support your journey.</p>
                                 </div>
                                 <div className="col-md-6">
-                                        <img src="../images/1.jpg" alt="Our Story" className="img-fluid rounded shadow-sm" />
+                                        <img src="/images/1.jpg" alt="Our Story" className="img-fluid rounded shadow-sm" />
                                 </div>
                         </div>
                 </div>

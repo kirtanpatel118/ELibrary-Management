@@ -35,7 +35,7 @@ function NavBar() {
 
           {/* Logo — far LEFT, clicks to Home */}
           <Link className="navbar-brand" to='/'>
-            <img src="../images/gls_logo.jpg" alt="GLS" className="logo" />
+            <img src="/images/gls_logo.jpg" alt="GLS" className="logo" />
           </Link>
 
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

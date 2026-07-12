@@ -1,7 +1,7 @@
 /* Login Css */
 /* Style for the login page */
 .login-body {
-        background: url(./images/6.jpg) no-repeat center center fixed;
+        background: url(/images/6.jpg) no-repeat center center fixed;
         /* Adjusted path for login background */
         background-size: cover;
         margin: 0;
