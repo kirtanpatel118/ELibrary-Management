@@ -156,7 +156,7 @@ const UserList = () => {
                 <td>{student.firstname}</td>
                 <td>{student.lastname}</td>
                 <td>{student.email}</td>
-                <td>{student.course}</td>
+                <td>{student.course ? student.course.toUpperCase() : ''}</td>
                 <td>
                   <button
                     className="actionButton editButton"

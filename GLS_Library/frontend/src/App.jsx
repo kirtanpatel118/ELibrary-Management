@@ -29,16 +29,19 @@ import BookRequest from '../pages/BookRequest'
 import ForgotPassword from '../pages/ForgotPassword'
 import ContactQueries from '../pages/Admin/ContactQueries'
 import BookRequests from '../pages/Admin/BookRequests'
+import MyBooks from '../pages/User/MyBooks'
+import IssuedBooksUser from '../pages/User/IssuedBooksUser'
 
 
 function PrivateRoute({ children }) {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, loading } = useAuth();
+  if (loading) return null;
   return isLoggedIn ? children : <Navigate to="/login" replace />;
-
-};
+}
 
 function PublicRoute({ children }) {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, loading } = useAuth();
+  if (loading) return null;
   return isLoggedIn ? <Navigate to="/" replace /> : children;
 }
 
@@ -70,14 +73,16 @@ function App() {
           <Route exact path='/book/update' element={<PrivateRoute><BookUpdate /></PrivateRoute>} />
           
           <Route exact path='/admin' element={<Admin />} />
-          <Route exact path='/admin/view-issued-book' element={<IssuedBooks />} />
-          <Route exact path='/admin/add-book' element={<AddBook />} />
+          <Route exact path='/admin/view-issued-book' element={<PrivateRoute><IssuedBooks /></PrivateRoute>} />
+          <Route exact path='/admin/add-book' element={<PrivateRoute><AddBook /></PrivateRoute>} />
           <Route exact path='/admin/searched-book' element={<PrivateRoute><SearchedBooks /></PrivateRoute>} />
           <Route exact path='/admin/view-users' element={<PrivateRoute><UserList /></PrivateRoute>} />
           <Route exact path='/admin/view-books' element={<PrivateRoute><BookList /></PrivateRoute>} />
           <Route exact path='/faculty/request-book' element={<PrivateRoute><BookRequest /></PrivateRoute>} />
           <Route exact path='/admin/contact-queries' element={<PrivateRoute><ContactQueries /></PrivateRoute>} />
           <Route exact path='/admin/book-requests' element={<PrivateRoute><BookRequests /></PrivateRoute>}/>
+          <Route exact path='/my-books' element={<PrivateRoute><MyBooks /></PrivateRoute>} />
+          <Route exact path='/issued-books' element={<PrivateRoute><IssuedBooksUser /></PrivateRoute>} />
 
 
 

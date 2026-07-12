@@ -88,43 +88,86 @@ function Cart() {
   };
 
   return (
-    <>
-      <h2 style={{textAlign:'center',marginTop:'80px',color:'#201e43'}}>Issued Books ({Books.length})</h2>
+    <div style={{ minHeight: '70vh', paddingTop: '90px', paddingBottom: '40px', background: '#f4f6f9' }}>
+      {/* Header */}
+      <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+        <h2 style={{ color: '#134B70', fontWeight: 700, fontSize: '28px' }}>
+          My Cart
+          <span style={{
+            display: 'inline-block', marginLeft: '10px',
+            background: '#134B70', color: '#fff',
+            borderRadius: '20px', padding: '2px 14px', fontSize: '16px', verticalAlign: 'middle'
+          }}>{Books.length}</span>
+        </h2>
+        {Books.length > 0 && (
+          <p style={{ color: '#666', marginTop: '6px' }}>Review your selected books before submitting for issue</p>
+        )}
+      </div>
+
       {Books.length === 0 ? (
-        <p style={{textAlign:'center'}}>No books issued</p>
+        <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+          <div style={{ fontSize: '64px', marginBottom: '16px' }}>📚</div>
+          <h4 style={{ color: '#555', marginBottom: '8px' }}>Your cart is empty</h4>
+          <p style={{ color: '#999', marginBottom: '24px' }}>Browse our collection and add books to issue.</p>
+          <a href="/books" style={{
+            background: '#134B70', color: '#fff', padding: '10px 28px',
+            borderRadius: '40px', textDecoration: 'none', fontWeight: 600, fontSize: '15px'
+          }}>Browse Books</a>
+        </div>
       ) : (
-        <section className="books-grid py-5">
-          <div className="container">
-            <div className="row g-4">
-              {Books.map((Book) => (
-                <div className="col-lg-3 col-md-4 col-sm-6" key={Book._id}>
-                  <div className="card shadow-sm">
-                    <img src={Book.BookPhoto.url} alt='book from backend' loading="fast" className="card-img-top" />
-                    <div className="card-body text-center">
-                      <h5 className="card-title">{Book.Bookname}</h5>
-                      <p className="card-text text-muted">{Book.Author}</p>
-                      <button
-                        onClick={() => handleAddToCart(Book)}
-                        className={`btn btn-sm ${Books.some(issuedBook => issuedBook._id === Book._id) ? 'btn-danger' : 'btn-primary'}`}
-                      >
-                        {Books.some(issuedBook => issuedBook._id === Book._id) ? 'Remove Book' : 'Issue Book'}
-                      </button>
+        <>
+          <section className="books-grid py-3">
+            <div className="container">
+              <div className="row g-4">
+                {Books.map((Book) => (
+                  <div className="col-lg-3 col-md-4 col-sm-6" key={Book._id}>
+                    <div className="card shadow-sm h-100" style={{ borderRadius: '12px', overflow: 'hidden', border: 'none' }}>
+                      <img src={Book.BookPhoto.url} alt={Book.Bookname} loading="lazy"
+                        className="card-img-top" style={{ height: '200px', objectFit: 'cover' }} />
+                      <div className="card-body text-center">
+                        <h5 className="card-title" style={{ color: '#134B70', fontSize: '15px', fontWeight: 600 }}>{Book.Bookname}</h5>
+                        <p className="card-text text-muted" style={{ fontSize: '13px' }}>{Book.Author}</p>
+                        <button
+                          onClick={() => handleAddToCart(Book)}
+                          style={{
+                            background: '#e74c3c', color: '#fff', border: 'none',
+                            borderRadius: '40px', padding: '6px 18px', fontSize: '13px',
+                            fontWeight: 600, cursor: 'pointer'
+                          }}
+                        >
+                          Remove
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+          </section>
+
+          {/* Issue Button */}
+          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+            <button
+              onClick={handleFinalIssue}
+              style={{
+                background: '#134B70', color: '#fff', border: 'none',
+                borderRadius: '40px', padding: '14px 48px',
+                fontSize: '16px', fontWeight: 700, cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(19,75,112,0.3)',
+                transition: 'background 0.2s'
+              }}
+              onMouseOver={e => e.target.style.background = '#0d3554'}
+              onMouseOut={e => e.target.style.background = '#134B70'}
+            >
+              Submit for Issue ({Books.length} {Books.length === 1 ? 'book' : 'books'})
+            </button>
+            <p style={{ color: '#999', fontSize: '13px', marginTop: '10px' }}>
+              Books will be sent to admin for approval
+            </p>
           </div>
-        </section>
+        </>
       )}
-      <div class="add-to-cart-button">
-      <button className="add-to-cart-btn" onClick={handleFinalIssue} disabled={Books.length === 0}>
-      Final Issue
-       </button>
-      </div>
-      
-       
-    </>
+    </div>
   );
 }
 

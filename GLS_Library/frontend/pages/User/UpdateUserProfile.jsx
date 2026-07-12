@@ -22,10 +22,14 @@ function Update() {
     });
 
     useEffect(() => {
+        if (!location.state) {
+            navigate('/profile');
+            return;
+        }
         if (location.state.user) {
             setUser(location.state.user);
         }
-    }, [location.state.user]);
+    }, []);
 
     const updateUser = (updatedUser) => {
         const uID = user.userID;

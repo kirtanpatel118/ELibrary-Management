@@ -36,10 +36,75 @@ const SendOTP = async (req, res) => {
   otpStore[Email] = { otp, expiresAt: Date.now() + 300000 }; // Store OTP with expiration time
 
   const mailOptions = {
-    from: process.env.EMAIL,
+    from: `"GLS Library" <${process.env.EMAIL}>`,
     to: Email,
-    subject: 'Your OTP Code',
-    text: `Your OTP code is ${otp}. It is valid for 5 minutes.`,
+    subject: 'Your OTP Code – GLS E-Library',
+    text: `Your OTP code is ${otp}. It is valid for 5 minutes. Do not share it with anyone.`,
+    html: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OTP Verification</title>
+</head>
+<body style="margin:0;padding:0;background:#f4f6f9;font-family:Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f9;padding:40px 0;">
+    <tr>
+      <td align="center">
+        <table width="480" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+          <!-- Header -->
+          <tr>
+            <td style="background:#134B70;padding:28px 32px;text-align:center;">
+              <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:1px;">
+                GLS E-Library
+              </h1>
+              <p style="margin:4px 0 0;color:#a8d8ea;font-size:13px;">GLS University, Ahmedabad</p>
+            </td>
+          </tr>
+          <!-- Body -->
+          <tr>
+            <td style="padding:36px 40px;">
+              <h2 style="margin:0 0 8px;color:#134B70;font-size:20px;">OTP Verification</h2>
+              <p style="margin:0 0 24px;color:#555;font-size:14px;line-height:1.6;">
+                You requested a One-Time Password to reset your GLS Library account password.
+                Use the code below — it expires in <strong>5 minutes</strong>.
+              </p>
+
+              <!-- OTP Box -->
+              <div style="text-align:center;margin:0 0 28px;">
+                <div style="display:inline-block;background:#f0f7ff;border:2px dashed #134B70;border-radius:12px;padding:18px 40px;">
+                  <span style="font-size:40px;font-weight:800;letter-spacing:12px;color:#134B70;font-family:'Courier New',monospace;">${otp}</span>
+                </div>
+              </div>
+
+              <p style="margin:0 0 16px;color:#555;font-size:13px;line-height:1.6;">
+                If you did not request this OTP, you can safely ignore this email.
+                Your account remains secure.
+              </p>
+
+              <div style="border-top:1px solid #eee;margin:24px 0;"></div>
+
+              <p style="margin:0;color:#999;font-size:12px;">
+                ⏱ This code expires in <strong>5 minutes</strong>.<br/>
+                🔒 Never share this OTP with anyone.
+              </p>
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="background:#f9f9f9;padding:20px 40px;text-align:center;border-top:1px solid #eee;">
+              <p style="margin:0;color:#aaa;font-size:12px;">
+                &copy; 2024 GLS Library &bull; Netaji Road, Opp. Law Garden, Ellisbridge, Ahmedabad – 380006<br/>
+                <a href="mailto:inquiry@glsuniversity.ac.in" style="color:#134B70;text-decoration:none;">inquiry@glsuniversity.ac.in</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

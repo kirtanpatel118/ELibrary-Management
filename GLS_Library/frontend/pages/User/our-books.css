@@ -1,16 +1,109 @@
-.book-image {
-        height: 270px;
-        /* Adjust height to your preference */
-        width: 100%;
-        /* Ensures the width matches the card fill,cover,contain*/
-        object-fit: fill;
-        /* Maintains aspect ratio and crops the image if needed */
-        border-radius: 4px;
-        /* Optional: adds rounded corners */
+/* ── Books page grid ─────────────────────────────── */
+.ob-page {
+  background: #f4f6f9;
+  min-height: 100vh;
+  padding: 0 0 60px;
 }
 
-.card {
-        background-color: rgba(0, 0, 0, 0.7); /* Dark background with 70% opacity */
-        box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.2);
-      }
-      
+.ob-hero {
+  background: #1a1a2e;
+  padding: 36px 0 28px;
+  text-align: center;
+  margin-top: 68px;
+}
+
+.ob-hero h1 { color: #fff; font-size: 2rem; font-weight: 700; margin: 0 0 6px; }
+.ob-hero p  { color: rgba(255,255,255,0.7); margin: 0; font-size: 15px; }
+
+.ob-grid-wrap {
+  padding: 40px 32px;
+}
+
+.ob-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1100px) { .ob-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .ob-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .ob-grid { grid-template-columns: 1fr; } }
+
+/* ── Card ────────────────────────────────────────── */
+.ob-book-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ob-book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(19,75,112,0.15);
+}
+
+.ob-book-img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.ob-book-body {
+  padding: 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ob-book-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #134B70;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 40px;
+  margin: 0;
+}
+
+.ob-book-author {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.ob-book-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #e67e22;
+  margin: 4px 0 0;
+}
+
+.ob-book-footer {
+  padding: 10px 16px 16px;
+}
+
+.ob-issue-btn {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.ob-issue-btn.add    { background: #134B70; color: #fff; }
+.ob-issue-btn.remove { background: #e74c3c; color: #fff; }
+.ob-issue-btn:disabled { background: #aaa; color: #fff; cursor: not-allowed; }
+
+.ob-issue-btn:not(:disabled):hover { opacity: 0.85; }

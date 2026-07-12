@@ -1,6 +1,6 @@
 const express =require('express');
 const router=express.Router();
-const { Home, allUser, ProfileUpdate, AllBooks } = require('../Controller/protectedRoute');
+const { Home, allUser, ProfileUpdate, AllBooks, MyIssuedBooks } = require('../Controller/protectedRoute');
 const { Register,Login, auth_me,contact } = require('../Controller/authController');
 const SearchBook = require('../Controller/SearchBook');
 const { ForgotPassword } = require('../Controller/ForgotPassword');
@@ -17,5 +17,6 @@ router.patch('/profile/update/:uID',ProfileUpdate);
 router.get('/get-all-books',AllBooks);
 router.post('/search-book',SearchBook);
 router.post('/forgot-password',ForgotPassword);
+router.get('/my-issued-books/:userId',MyIssuedBooks);
 
 module.exports=router;

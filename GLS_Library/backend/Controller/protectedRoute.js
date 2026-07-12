@@ -1,6 +1,7 @@
 const db = require('../config/dbConnection');
 const Student = require('../Model/Student');
-const Book=require('../Model/Book');        
+const Book=require('../Model/Book');
+const IssuedBook = require('../Model/IssueBook');
 const mongoose = require('mongoose');
 
 const Home = async (req, res) => {
@@ -121,4 +122,14 @@ const updateBook = async (req, res) => {
 
 
 
-module.exports = { Home, allUser,ProfileUpdate,AllBooks,deleteBook,updateBook,getBook };
+const MyIssuedBooks = async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    const issuedBooks = await IssuedBook.find({ userId }).populate('bookId');
+    return res.json({ ok: true, issuedBooks });
+  } catch (error) {
+    return res.status(500).json({ ok: false, message: error.message });
+  }
+};
+
+module.exports = { Home, allUser,ProfileUpdate,AllBooks,deleteBook,updateBook,getBook,MyIssuedBooks };

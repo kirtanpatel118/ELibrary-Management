@@ -72,8 +72,8 @@ const IssuedBooks = () => {
               {issuedBooks.map((issuedBook) => (
                 <tr key={issuedBook._id}>
                   <td className="issued-books-user-info">
-                    {issuedBook.userId.firstname} <br />
-                    {issuedBook.userId.email}
+                    {issuedBook.userId ? issuedBook.userId.firstname : 'Unknown'} <br />
+                    {issuedBook.userId ? issuedBook.userId.email : ''}
                   </td>
                   <td className="issued-books-book-info">
                     {issuedBook.bookId ? issuedBook.bookId.Bookname : 'Unknown Book'} <br />
@@ -91,7 +91,7 @@ const IssuedBooks = () => {
                         Returned
                       </button>
                     ) : (
-                      <button className="btn btn-danger" onClick={() => handleReturnBook(issuedBook._id, issuedBook.bookId._id)}>
+                      <button className="btn btn-danger" onClick={() => handleReturnBook(issuedBook._id, issuedBook.bookId?._id)}>
                         Not Returned
                       </button>
                     )}

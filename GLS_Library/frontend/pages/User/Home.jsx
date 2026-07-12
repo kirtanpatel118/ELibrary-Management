@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react'
+﻿import { useState,useEffect } from 'react'
 import axios from 'axios';
 import { useLocation,useNavigate,useParams, Link } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthProvider';
@@ -126,10 +126,10 @@ function Home() {
       {/* <h1>home</h1> */}
 
       {/* <!-- Hero Section --> */}
-      <header class="hero d-flex align-items-center">
-        <div class="hero-content">
-          <h1 class="hero-title">The Best Library That Every Book Lover Must Visit</h1>
-          <p class="hero-description">Explore a vast collection of books and resources in a serene and
+      <header className="hero d-flex align-items-center">
+        <div className="hero-content">
+          <h1 className="hero-title">The Best Library That Every Book Lover Must Visit</h1>
+          <p className="hero-description">Explore a vast collection of books and resources in a serene and
             inspiring environment. Our library is designed to meet to all your
             reading and learning needs, provide a comfortable space for you to
             enjoy and study.</p>
@@ -142,81 +142,81 @@ function Home() {
 
 
       {/* <!-- Categories Section --> */}
-      <section class="categories py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Book Categories</h2>
-          <div class="row">
+      <section className="categories py-5">
+        <div className="container">
+          <h2 className="text-center mb-4">Book Categories</h2>
+          <div className="row">
             {/* <!-- Category Card 1 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm border-0">
+            <div className="col-md-4 mb-4">
+              <div className="card shadow-sm border-0">
                 <img src="images/oxana-melis-P0FrzZVB7DE-unsplash.jpg"
-                  class="card-img-top" alt="Category 1" />
-                <div class="card-body">
-                  <h5 class="card-title">Computer Science</h5>
-                  <p class="card-text">Dive into a world of imagination and
+                  className="card-img-top" alt="Category 1" />
+                <div className="card-body">
+                  <h5 className="card-title">Computer Science</h5>
+                  <p className="card-text">Dive into a world of imagination and
                     creativity with our extensive collection of fiction
                     books.</p>
                 </div>
               </div>
             </div>
             {/* <!-- Category Card 2 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-60582.jpg" class="card-img-top"
+            <div className="col-md-4 mb-4">
+              <div className="card shadow-sm border-0">
+                <img src="images/pexels-pixabay-60582.jpg" className="card-img-top"
                   alt="Category 2" />
-                <div class="card-body">
-                  <h5 class="card-title">Design</h5>
-                  <p class="card-text">Explore real-life stories and insights with
+                <div className="card-body">
+                  <h5 className="card-title">Design</h5>
+                  <p className="card-text">Explore real-life stories and insights with
                     our diverse range of non-fiction books.</p>
                 </div>
               </div>
             </div>
             {/* <!-- Category Card 3 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-415071.jpg" class="card-img-top"
+            <div className="col-md-4 mb-4">
+              <div className="card shadow-sm border-0">
+                <img src="images/pexels-pixabay-415071.jpg" className="card-img-top"
                   alt="Category 3" />
-                <div class="card-body">
-                  <h5 class="card-title">Management</h5>
-                  <p class="card-text">Enhance your knowledge with our collection
+                <div className="card-body">
+                  <h5 className="card-title">Management</h5>
+                  <p className="card-text">Enhance your knowledge with our collection
                     of science books covering various fields and topics.</p>
                 </div>
               </div>
             </div>
             {/* <!-- Category Card 4 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-60582.jpg" class="card-img-top"
+            <div className="col-md-4 mb-4">
+              <div className="card shadow-sm border-0">
+                <img src="images/pexels-pixabay-60582.jpg" className="card-img-top"
                   alt="Category 4" />
-                <div class="card-body">
-                  <h5 class="card-title">Law</h5>
-                  <p class="card-text">Uncover the past with our extensive range
+                <div className="card-body">
+                  <h5 className="card-title">Law</h5>
+                  <p className="card-text">Uncover the past with our extensive range
                     of history books that delve into different eras and
                     events.</p>
                 </div>
               </div>
             </div>
             {/* <!-- Category Card 5 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-415071.jpg" class="card-img-top"
+            <div className="col-md-4 mb-4">
+              <div className="card shadow-sm border-0">
+                <img src="images/pexels-pixabay-415071.jpg" className="card-img-top"
                   alt="Category 5" />
-                <div class="card-body">
-                  <h5 class="card-title">Commerce</h5>
-                  <p class="card-text">Learn about the lives of inspiring
+                <div className="card-body">
+                  <h5 className="card-title">Commerce</h5>
+                  <p className="card-text">Learn about the lives of inspiring
                     individuals through our collection of biography books.
                   </p>
                 </div>
               </div>
             </div>
             {/* <!-- Category Card 6 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm border-0">
-                <img src="images/pexels-pixabay-60582.jpg" class="card-img-top"
+            <div className="col-md-4 mb-4">
+              <div className="card shadow-sm border-0">
+                <img src="images/pexels-pixabay-60582.jpg" className="card-img-top"
                   alt="Category 6" />
-                <div class="card-body">
-                  <h5 class="card-title">Travel</h5>
-                  <p class="card-text">Discover new places and cultures with our
+                <div className="card-body">
+                  <h5 className="card-title">Travel</h5>
+                  <p className="card-text">Discover new places and cultures with our
                     selection of travel books.</p>
                 </div>
               </div>
@@ -226,37 +226,37 @@ function Home() {
       </section>
 
       {/* <!-- Gallery Section --> */}
-      <section class="gallery py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Library Gallery</h2>
-          <div class="row">
+      <section className="gallery py-5">
+        <div className="container">
+          <h2 className="text-center mb-4">Library Gallery</h2>
+          <div className="row">
             {/* <!-- Gallery Item 1 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="gallery-item">
-                <img src="images/4.jpg" class="img-fluid" alt="Gallery Image 1" />
-                <div class="overlay" >
-                  <div class="text">Find Your Next Read: <br/><br/>Explore our
+            <div className="col-md-4 mb-4">
+              <div className="gallery-item">
+                <img src="images/4.jpg" className="img-fluid" alt="Gallery Image 1" />
+                <div className="overlay" >
+                  <div className="text">Find Your Next Read: <br/><br/>Explore our
                                                                 extensive library collection, where you can find a wide
                                                                 range of books and resources in a comfortable setting.</div>
                 </div>
               </div>
             </div>
             {/* <!-- Gallery Item 2 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="gallery-item">
-                <img src="images/2.jpg" class="img-fluid" alt="Gallery Image 2" />
-                <div class="overlay" >
-                  <div class="text">Explore Our Library: <br/><br/>Browse through a
+            <div className="col-md-4 mb-4">
+              <div className="gallery-item">
+                <img src="images/2.jpg" className="img-fluid" alt="Gallery Image 2" />
+                <div className="overlay" >
+                  <div className="text">Explore Our Library: <br/><br/>Browse through a
                                                                 vast collection of books and resources tailored to your
                                                                 interests, all in a welcoming environment.</div>
                 </div>
               </div>
             </div>
             {/* <!-- Gallery Item 3 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="gallery-item">
-                <img src="images/3.jpg" class="img-fluid" alt="Gallery Image 3" />
-                <div class="overlay" >
+            <div className="col-md-4 mb-4">
+              <div className="gallery-item">
+                <img src="images/3.jpg" className="img-fluid" alt="Gallery Image 3" />
+                <div className="overlay" >
                   <div className="text">Your Reading Haven: <br/><br/>Discover a diverse
                                                                 selection of books and enjoy a cozy space designed to
                                                                 enhance your reading and learning experience.</div>
@@ -273,26 +273,26 @@ function Home() {
 
 
       {/* <!-- What Others Are Saying Section --> */}
-        <section class="testimonials py-5">
-                <div class="container">
-                        <h2 class="text-center mb-5">What Others Are Saying About Our Library</h2>
-                        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
+        <section className="testimonials py-5">
+                <div className="container">
+                        <h2 className="text-center mb-5">What Others Are Saying About Our Library</h2>
+                        <div id="testimonialCarousel" className="carousel slide" data-ride="carousel">
+                                <div className="carousel-inner">
                                         {/* <!-- Testimonial 1 --> */}
-                                        <div class="carousel-item active">
-                                                <div class="testimonial-item">
-                                                        <div class="row">
-                                                                <div class="col-lg-4 col-md-5">
-                                                                        <div class="testimonial-img">
+                                        <div className="carousel-item active">
+                                                <div className="testimonial-item">
+                                                        <div className="row">
+                                                                <div className="col-lg-4 col-md-5">
+                                                                        <div className="testimonial-img">
                                                                                 <img src="images/aditya.png"
-                                                                                        class="img-fluid rounded-circle"
+                                                                                        className="img-fluid rounded-circle"
                                                                                         alt="User 1" />
                                                                         </div>
                                                                 </div>
-                                                                <div class="col-lg-8 col-md-7">
-                                                                        <div class="testimonial-content">
+                                                                <div className="col-lg-8 col-md-7">
+                                                                        <div className="testimonial-content">
                                                                                 <h4>Aditya Rajput</h4>
-                                                                                <p class="testimonial-text">"As a coding
+                                                                                <p className="testimonial-text">"As a coding
                                                                                         student, I appreciate how this
                                                                                         library offers a wide range of
                                                                                         tech books and a peaceful area
@@ -303,20 +303,20 @@ function Home() {
                                                 </div>
                                         </div>
                                         {/* <!-- Testimonial 2 --> */}
-                                        <div class="carousel-item">
-                                                <div class="testimonial-item">
-                                                        <div class="row">
-                                                                <div class="col-lg-4 col-md-5">
-                                                                        <div class="testimonial-img">
+                                        <div className="carousel-item">
+                                                <div className="testimonial-item">
+                                                        <div className="row">
+                                                                <div className="col-lg-4 col-md-5">
+                                                                        <div className="testimonial-img">
                                                                                 <img src="images/user2.jpg"
-                                                                                        class="img-fluid rounded-circle"
+                                                                                        className="img-fluid rounded-circle"
                                                                                         alt="User 2" />
                                                                         </div>
                                                                 </div>
-                                                                <div class="col-lg-8 col-md-7">
-                                                                        <div class="testimonial-content">
+                                                                <div className="col-lg-8 col-md-7">
+                                                                        <div className="testimonial-content">
                                                                                 <h4>Emily</h4>
-                                                                                <p class="testimonial-text">"I love the
+                                                                                <p className="testimonial-text">"I love the
                                                                                         variety of books available
                                                                                         here. The quiet environment and
                                                                                         comfortable seating make it the
@@ -329,20 +329,20 @@ function Home() {
                                                 </div>
                                         </div>
                                         {/* <!-- Testimonial 3 --> */}
-                                        <div class="carousel-item">
-                                                <div class="testimonial-item">
-                                                        <div class="row">
-                                                                <div class="col-lg-4 col-md-5">
-                                                                        <div class="testimonial-img">
+                                        <div className="carousel-item">
+                                                <div className="testimonial-item">
+                                                        <div className="row">
+                                                                <div className="col-lg-4 col-md-5">
+                                                                        <div className="testimonial-img">
                                                                                 <img src="images/jevin.png"
-                                                                                        class="img-fluid rounded-circle"
+                                                                                        className="img-fluid rounded-circle"
                                                                                         alt="User 3" />
                                                                         </div>
                                                                 </div>
-                                                                <div class="col-lg-8 col-md-7">
-                                                                        <div class="testimonial-content">
+                                                                <div className="col-lg-8 col-md-7">
+                                                                        <div className="testimonial-content">
                                                                                 <h4>Jevin Kotak</h4>
-                                                                                <p class="testimonial-text">"A wonderful
+                                                                                <p className="testimonial-text">"A wonderful
                                                                                         place to explore books and enjoy
                                                                                         some quiet time. It’s easy to
                                                                                         find what you’re looking for,
@@ -355,15 +355,15 @@ function Home() {
                                         </div>
                                 </div>
                                 {/* <!-- Carousel Controls --> */}
-                                <a class="carousel-control-prev" href="#testimonialCarousel" role="button"
+                                <a className="carousel-control-prev" href="#testimonialCarousel" role="button"
                                         data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#testimonialCarousel" role="button"
+                                <a className="carousel-control-next" href="#testimonialCarousel" role="button"
                                         data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Next</span>
                                 </a>
                         </div>
                 </div>
@@ -375,3 +375,4 @@ function Home() {
 }
 
 export default Home;
+

@@ -4,21 +4,26 @@
     background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 .signup-wrapper {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     max-width: 480px;
     width: 100%;
     overflow-y: auto;
-    max-height: 70vh;
+    max-height: calc(100vh - 140px);
     padding-right: 20px;
 }
 
@@ -168,64 +173,39 @@
     font-size: 12px;
     margin-top: 5px;
 }
-/* Ensure text inside the input fields is visible */
-input[type="text"], 
-input[type="email"], 
-input[type="tel"], 
-input[type="password"], 
-input[type="date"], 
-select {
-color: #333; /* Dark text color */
-background-color: #fff; /* Light background for better contrast */
-border: 1px solid #ccc; /* Light border */
-padding: 8px;
-font-size: 14px;
-width: 100%;
-box-sizing: border-box;
-}
-
-/* Focus state for input fields */
-input[type="text"]:focus, 
-input[type="email"]:focus, 
-input[type="tel"]:focus, 
-input[type="password"]:focus, 
-input[type="date"]:focus, 
-select:focus {
-border: 2px solid #508C9B; /* Highlight border on focus */
-background-color: #f4f9fa; /* Light background on focus */
-}
-
-input::placeholder {
-color: #000000; /* Placeholder text color */
-}
-
-/* Styling for the select input */
-select {
-    color: #333; /* Dark text color */
-    background-color: #fff; /* Light background for normal state */
-    border: 1px solid #ccc; /* Light border */
-    padding: 8px;
+/* Scoped overrides for signup form inputs — glass style */
+.signup-wrapper input[type="text"],
+.signup-wrapper input[type="email"],
+.signup-wrapper input[type="tel"],
+.signup-wrapper input[type="password"],
+.signup-wrapper input[type="date"],
+.signup-wrapper select {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 14px;
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 4px;
-  }
-  
-  /* Styling for the dropdown when it's open */
-  select:focus, select:active {
-    background-color: #000; /* Black background when focused */
-    color: #fff; /* White text color */
-    border-color: #508C9B; /* Highlighted border color */
-  }
-  
-  /* Style the options when the dropdown is open */
-  select option {
-    background-color: #000; /* Black background for options */
-    color: #fff; /* White text for options */
-  }
-  
-  /* Style the select options on hover */
-  select option:hover {
-    background-color: #333; /* Darker background when hovering over options */
-    color: #fff; /* Ensure text remains white on hover */
-  }
+    border-radius: 40px;
+}
+
+.signup-wrapper input[type="text"]:focus,
+.signup-wrapper input[type="email"]:focus,
+.signup-wrapper input[type="tel"]:focus,
+.signup-wrapper input[type="password"]:focus,
+.signup-wrapper input[type="date"]:focus,
+.signup-wrapper select:focus {
+    outline: none;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.signup-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.signup-wrapper select option {
+    background-color: #1a1a2e;
+    color: #fff;
+}

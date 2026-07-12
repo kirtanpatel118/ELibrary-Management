@@ -1,0 +1,160 @@
+/* OTP Verification page — matches Login/ForgotPassword dark-glass style */
+
+.otp-body {
+  background: url(./images/6.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  padding: 80px 16px 40px;
+}
+
+.otp-card {
+  max-width: 420px;
+  width: 100%;
+  padding: 36px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.otp-logo {
+  width: 50%;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.otp-title {
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.otp-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.otp-form-group {
+  margin-bottom: 18px;
+}
+
+.otp-label {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.otp-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.otp-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+}
+
+.otp-input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.otp-input::placeholder {
+  color: #aaa;
+}
+
+.otp-input:focus {
+  border-color: #007bff;
+  background: rgba(255,255,255,0.18);
+}
+
+.otp-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.otp-code-input {
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 14px;
+}
+
+.otp-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 40px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+
+.otp-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.otp-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.otp-btn-secondary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.otp-btn-secondary:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.otp-back-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.otp-back-link a {
+  color: #7ec8e3;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.otp-back-link a:hover {
+  text-decoration: underline;
+  color: #fff;
+}

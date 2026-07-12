@@ -37,7 +37,7 @@ function MyBooks() {
   }, []);
 
   return (
-    <div className="profile-container" style={{ marginTop: '80px', padding: '20px' }}>
+    <div className="profile-container" style={{ marginTop: '100px', padding: '20px 32px 60px' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>My Issued Books</h2>
       {loading ? (
         <p style={{ textAlign: 'center' }}>Loading...</p>

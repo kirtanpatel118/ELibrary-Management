@@ -142,7 +142,7 @@ function ForgotPassword() {
         </form>
       {/* Add the 'Back to Login' link below the Reset Password button */}
       <div className="forgot-password-back-to-login">
-          <Link to="" className="forgot-password-back-to-login-link">
+          <Link to="/login" className="forgot-password-back-to-login-link">
             Back to Login
           </Link>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
@@ -350,8 +350,8 @@ function Admin() {
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="category" className="form-label">Book Category</label>
-                    <select className="form-select" id="category" name="Category" onChange={handleOnChange} required>
-                      <option value="" selected disabled>Choose category</option>
+                    <select className="form-select" id="category" name="Category" defaultValue="" onChange={handleOnChange} required>
+                      <option value="" disabled>Choose category</option>
                       <option value="Programming">Programming</option>
                       <option value="Law">Law</option>
                       <option value="Commerce">Commerce</option>
@@ -359,23 +359,23 @@ function Admin() {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <label for="bookName" className="form-label">Book Name</label>
+                    <label htmlFor="bookName" className="form-label">Book Name</label>
                     <input type="text" className="form-control" id="Bookname" placeholder="Enter book name" name="Bookname" value={BookData.Bookname} onChange={handleOnChange} required />
                   </div>
                   <div className="mb-3">
-                    <label for="bookID" className="form-label">ISDN number</label>
+                    <label htmlFor="bookID" className="form-label">ISDN number</label>
                     <input type="text" className="form-control" id="BookID" placeholder="Enter book ID" name="Bookid" value={BookData.Bookid} onChange={handleOnChange} required />
                   </div>
                   <div className="mb-3">
-                    <label for="authorName" className="form-label">Author Name</label>
+                    <label htmlFor="authorName" className="form-label">Author Name</label>
                     <input type="text" className="form-control" id="authorName" placeholder="Enter author name" name="Author" value={BookData.Author} onChange={handleOnChange} required />
                   </div>
                   <div className="mb-3">
-                    <label for="price" className="form-label">Price</label>
+                    <label htmlFor="price" className="form-label">Price</label>
                     <input type="text" className="form-control" id="price" name="price" onChange={BookData.Price} required />
                   </div>
                   <div className="mb-4">
-                    <label for="bookPhoto" className="form-label">Book Photo</label>
+                    <label htmlFor="bookPhoto" className="form-label">Book Photo</label>
                     <input type="file" className="form-control" id="bookPhoto" name="BookPhoto" onChange={handleFileChange} required />
                   </div>
 

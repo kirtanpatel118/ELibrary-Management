@@ -1,7 +1,9 @@
 const express = require('express');
-  
+
 const IssueBook = require('../../Model/IssueBook');
-const Book=require('../../Model/Book');
+const Book = require('../../Model/Book');
+const Student = require('../../Model/Student');
+const { sendEmail, bookIssueTemplate, bookReturnTemplate } = require('../../utils/emailService');
 
 
 const IssuedBooks= async (req, res) => {
@@ -69,6 +71,18 @@ const FinalIssue = async (req, res) => {
       });
       await issuedBook.save();
     }
+    // Send confirmation email to the student
+    const student = await Student.findById(userId);
+    if (student) {
+      const returnBy = new Date(Date.now() + 15 * 24 * 60 * 60 * 1000)
+        .toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+      sendEmail(
+        student.email,
+        'Book Issue Request Submitted – GLS E-Library',
+        bookIssueTemplate(student.firstname, books, returnBy)
+      ).catch(() => {});
+    }
+
     res.json({ ok: true, message: 'Books issued for admin approval!' });
   } catch (error) {
     console.error(error);
@@ -106,6 +120,16 @@ const ReturnBook= async (req, res) => {
     // Increment the book quantity
     book.Quantity += 1; // Assuming you have a 'quantity' field in your Book model
     await book.save();
+
+    // Send return confirmation email
+    const student = await Student.findById(issuedBook.userId);
+    if (student) {
+      sendEmail(
+        student.email,
+        'Book Return Confirmed – GLS E-Library',
+        bookReturnTemplate(student.firstname, book.Bookname)
+      ).catch(() => {});
+    }
 
     res.json({ ok: true, message: 'Book returned successfully and quantity updated' });
   } catch (error) {

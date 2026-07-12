@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
+const { sendEmail, passwordResetTemplate } = require('../utils/emailService');
 
 
 
@@ -56,13 +57,11 @@ const ForgotPassword = async (req, res) => {
         return res.status(404).json({ error: 'User  not found.', ok: false });
       }
 
-      // Hash the new password
       const hashedPassword = await bcrypt.hash(newPassword, 10);
-
-      // Update the user's password
       user.password = hashedPassword;
       await user.save();
 
+      sendEmail(user.email, 'Password Reset Successful – GLS E-Library', passwordResetTemplate(user.firstname)).catch(() => {});
       return res.status(200).json({ message: 'Password reset successfully!', ok: true });
     }
     else if (role === 'faculty') {
@@ -71,13 +70,11 @@ const ForgotPassword = async (req, res) => {
         return res.status(404).json({ error: 'User  not found.', ok: false });
       }
 
-      // Hash the new password
       const hashedPassword = await bcrypt.hash(newPassword, 10);
-
-      // Update the user's password
       user.password = hashedPassword;
       await user.save();
 
+      sendEmail(user.email, 'Password Reset Successful – GLS E-Library', passwordResetTemplate(user.firstname)).catch(() => {});
       return res.status(200).json({ message: 'Password reset successfully!', ok: true });
     }
     else {
@@ -95,24 +92,17 @@ const ForgotPassword = async (req, res) => {
 
       //   return res.status(200).json({ message: 'Password reset successfully!',ok:true });
       // }
-      const { email, role, newPassword } = req.body;
-
       const student = await User.findOne({ email, role });
       if (!student) {
         return res.status(404).json({ error: 'Student not found.' });
       }
 
-      // Hash the new password
-      // const hashedPassword = await bcrypt.hash(newPassword, 10);
-      // student.password = hashedPassword;
-
-      // Update the student's password
-      // console.log(student);
-      student.password=newPassword;
-      console.log(student)
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      student.password = hashedPassword;
       await student.save();
 
-      return res.status(200).json({ message: 'Password reset successfully!' });
+      sendEmail(student.email, 'Password Reset Successful – GLS E-Library', passwordResetTemplate(student.firstname)).catch(() => {});
+      return res.status(200).json({ message: 'Password reset successfully!', ok: true });
     }
   } catch (error) {
     console.error(error);

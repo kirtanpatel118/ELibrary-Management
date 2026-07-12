@@ -60,7 +60,7 @@ function User_Profile() {
     <div className="profile-container">
       <h3 className="profile-header">User Profile</h3>
       <div className="profile-card">
-        <form className="profile-form">
+        <div className="profile-form">
           <p className="profile-field">
             <span className="profile-label">First Name:</span>{' '}
             <span className="profile-value">{user.firstname}</span>
@@ -83,24 +83,18 @@ function User_Profile() {
           </p>
           <p className="profile-field">
             <span className="profile-label">Course:</span>{' '}
-            <span className="profile-value">{user.course}</span>
+            <span className="profile-value">{user.course ? user.course.toUpperCase() : ''}</span>
           </p>
-          <p className="profile-field">
-            <span className="profile-label">Created At:</span>{' '}
-            <span className="profile-value">{user.createdAt}</span>
-          </p>
-          <p className="profile-field">
-            <span className="profile-label">Updated At:</span>{' '}
-            <span className="profile-value">{user.updatedAt}</span>
-          </p>
-          <p className="profile-field">
-            <span className="profile-label">User ID:</span>{' '}
-            <span className="profile-value">{user.userID}</span>
-          </p>
+          {user.createdAt && (
+            <p className="profile-field">
+              <span className="profile-label">Member Since:</span>{' '}
+              <span className="profile-value">{new Date(user.createdAt).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </p>
+          )}
           <button className="profile-button" onClick={handleClick}>
             Update Profile
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );

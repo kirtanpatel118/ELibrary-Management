@@ -1,7 +1,9 @@
 /* General Page Container Styling */
 .issued-books-page-container {
         padding: 40px;
+        padding-top: 80px;
         background-color: #f8f9fa;
+        min-height: 60vh;
 }
 
 /* Header Styling for 'Issued Books' */
@@ -11,11 +13,6 @@
         margin-bottom: 20px;
         color: #134b70;
         text-align: center;
-        /* Centering on the page */
-    position: absolute; /* Enables absolute positioning */
-    top: 50%; /* Moves the header 50% down the viewport */
-    left: 50%; /* Moves the header 50% to the right */
-    transform: translate(-50%, -50%);/* Centers the header by adjusting for its dimensions */
 }
 
 /* Message when there are no books issued */

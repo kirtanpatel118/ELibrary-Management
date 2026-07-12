@@ -4,6 +4,7 @@ const Faculty = require('../Model/Faculty');
 const Contact = require('../Model/Contact');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
+const { sendEmail, welcomeTemplate } = require('../utils/emailService');
 
 const bcrypt = require('bcrypt');
 const Register = async (req, res) => {
@@ -43,6 +44,7 @@ const Register = async (req, res) => {
             const new_user_data = new Student(user_data);
             const save_data = await new_user_data.save();
             console.log("received client data is: ", user_data)
+            sendEmail(user_data.email, 'Welcome to GLS E-Library!', welcomeTemplate(user_data.firstname, 'student')).catch(() => {});
             return res.json({ ok: true, message: 'registration complate' });
 
 
@@ -69,6 +71,7 @@ const Register = async (req, res) => {
             const new_user_data = new Faculty(user_data);
             const save_data = await new_user_data.save();
             console.log("received client data is: ", user_data)
+            sendEmail(user_data.email, 'Welcome to GLS E-Library!', welcomeTemplate(user_data.firstname, 'faculty')).catch(() => {});
             return res.json({ ok: true, message: 'registration complate' });
 
 
@@ -97,6 +100,7 @@ const Register = async (req, res) => {
             const new_user_data = new Admin(user_data);
             const save_data = await new_user_data.save();
             console.log("received client data is: ", user_data)
+            sendEmail(user_data.email, 'Welcome to GLS E-Library!', welcomeTemplate(user_data.firstname, 'admin')).catch(() => {});
             return res.json({ ok: true, message: 'registration complate' });
 
 
