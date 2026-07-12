@@ -31,7 +31,7 @@ function Login() {
   useEffect(() => {
     const token = localStorage.getItem('jwt_token');
     if (token) {
-      axios.get('http://localhost:3000/user/auth', {
+      axios.get('https://elibrary-management.onrender.com/user/auth', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {
@@ -74,11 +74,11 @@ function Login() {
       let response;
 
       if (LoginInputs.role === 'faculty') {
-        response = await axios.post('http://localhost:3000/faculty/login', LoginInputs);
+        response = await axios.post('https://elibrary-management.onrender.com/faculty/login', LoginInputs);
       } else if (LoginInputs.role === 'admin') {
-        response = await axios.post('http://localhost:3000/admin/login', LoginInputs);
+        response = await axios.post('https://elibrary-management.onrender.com/admin/login', LoginInputs);
       } else {
-        response = await axios.post('http://localhost:3000/user/login', LoginInputs);
+        response = await axios.post('https://elibrary-management.onrender.com/user/login', LoginInputs);
       }
 
       if (response.data.ok) {

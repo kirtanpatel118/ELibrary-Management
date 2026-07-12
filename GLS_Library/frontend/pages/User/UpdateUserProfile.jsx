@@ -34,7 +34,7 @@ function Update() {
     const updateUser = (updatedUser) => {
         const uID = user.userID;
         axios
-            .patch(`http://localhost:3000/user/profile/update/${uID}`, updatedUser)
+            .patch(`https://elibrary-management.onrender.com/user/profile/update/${uID}`, updatedUser)
             .then((response) => {
                 if (response.data.ok) {
                     console.log('User updated successfully!');

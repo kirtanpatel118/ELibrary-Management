@@ -24,7 +24,7 @@ function User_Profile() {
     const token = localStorage.getItem('jwt_token');
     if (token) {
       axios
-        .get('http://localhost:3000/user/auth', {
+        .get('https://elibrary-management.onrender.com/user/auth', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {

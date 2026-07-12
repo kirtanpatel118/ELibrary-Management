@@ -92,7 +92,7 @@ function Home() {
 
         const token = localStorage.getItem('jwt_token');
         if (token) {
-            axios.get('http://localhost:3000/user/auth', {
+            axios.get('https://elibrary-management.onrender.com/user/auth', {
                 headers: { Authorization: `Bearer ${token}` },
             })
                 .then((response) => {

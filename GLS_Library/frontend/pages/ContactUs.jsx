@@ -12,7 +12,7 @@ function ContactUs() {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/user/contact', ContactInputs);
+      const response = await axios.post('https://elibrary-management.onrender.com/user/contact', ContactInputs);
       if (response.data.ok) {
         toast.success('Message sent successfully!');
         setContactInputs({ name: '', email: '', message: '' });

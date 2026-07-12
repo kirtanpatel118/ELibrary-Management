@@ -12,7 +12,7 @@ function ViewBooks() {
 
     const fetchBooks = () => {
         const token = localStorage.getItem('jwt_token');
-        axios.get('http://localhost:3000/user/get-all-books', {
+        axios.get('https://elibrary-management.onrender.com/user/get-all-books', {
             headers: { Authorization: `Bearer ${token}` },
         })
             .then((res) => {
@@ -44,7 +44,7 @@ function ViewBooks() {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    const res = await axios.delete(`http://localhost:3000/admin/delete-book/${bookId}`, {
+                    const res = await axios.delete(`https://elibrary-management.onrender.com/admin/delete-book/${bookId}`, {
                         headers: { Authorization: `Bearer ${localStorage.getItem('jwt_token')}` },
                     });
                     if (res.data.ok) {

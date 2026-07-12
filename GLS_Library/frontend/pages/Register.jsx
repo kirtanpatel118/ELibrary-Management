@@ -109,7 +109,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/user/register', RegisterInputs);
+      const response = await axios.post('https://elibrary-management.onrender.com/user/register', RegisterInputs);
       if (response.data.ok) {
         toast.success('Register Successfully!');
         setOk(true);

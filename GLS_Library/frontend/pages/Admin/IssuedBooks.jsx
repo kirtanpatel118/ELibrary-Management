@@ -10,7 +10,7 @@ const IssuedBooks = () => {
   useEffect(() => {
     const fetchIssuedBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/admin/issued-books', {
+        const response = await axios.get('https://elibrary-management.onrender.com/admin/issued-books', {
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -32,7 +32,7 @@ const IssuedBooks = () => {
 
   const handleReturnBook = async (issuedBookId, bookId) => {
     try {
-      const response = await axios.post(`http://localhost:3000/admin/return-book/${issuedBookId}`, { bookId });
+      const response = await axios.post(`https://elibrary-management.onrender.com/admin/return-book/${issuedBookId}`, { bookId });
       if (response.data.ok) {
         toast.success('Book returned successfully');
         // Update the issuedBooks state to reflect the returned book

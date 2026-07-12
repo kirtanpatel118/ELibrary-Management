@@ -12,7 +12,14 @@ const faculty=require('./Router/faculty');
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://elibrary-management.vercel.app',
+    /\.vercel\.app$/
+  ],
+  credentials: true
+}));
 
 
 app.use('/user',user);
@@ -20,9 +27,9 @@ app.use('/admin',admin);
 app.use('/faculty',faculty);
 
 
-app.listen(3000, () => {
-    console.log('server runnig at port 3000');
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`server running at port ${PORT}`);
 });
 
 

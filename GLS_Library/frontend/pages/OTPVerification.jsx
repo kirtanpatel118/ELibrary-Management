@@ -18,7 +18,7 @@ function OTPVerification() {
     }
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/admin/send-otp', { Email });
+      const response = await axios.post('https://elibrary-management.onrender.com/admin/send-otp', { Email });
       if (response.data.ok) {
         toast.success('OTP sent to your email!');
         setIsOtpSent(true);
@@ -39,7 +39,7 @@ function OTPVerification() {
     }
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/admin/verify-otp', {
+      const response = await axios.post('https://elibrary-management.onrender.com/admin/verify-otp', {
         Email,
         received_otp: otp,
       });

@@ -37,7 +37,7 @@ function BookUpdate() {
     //     console.log(bID);
 
     //     axios
-    //         .patch(`http://localhost:3000/admin/update-book/${bID}`, updatedBook)
+    //         .patch(`https://elibrary-management.onrender.com/admin/update-book/${bID}`, updatedBook)
     //         .then((response) => {
     //             if (response.data.ok) {
     //                 console.log("book updated succefuuly");
@@ -81,7 +81,7 @@ function BookUpdate() {
     //     }
 
     //     try {
-    //         const response = await axios.patch(`http://localhost:3000/admin/update-book/${bID}`, formData, {
+    //         const response = await axios.patch(`https://elibrary-management.onrender.com/admin/update-book/${bID}`, formData, {
     //             headers: {
     //                 'Content-Type': 'multipart/form-data', // Important for file uploads
     //             },
@@ -113,7 +113,7 @@ function BookUpdate() {
         }
 
         try {
-            const response = await axios.patch(`http://localhost:3000/admin/update-book/${bID}`, formData, {
+            const response = await axios.patch(`https://elibrary-management.onrender.com/admin/update-book/${bID}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data', // Important for file uploads
                 },

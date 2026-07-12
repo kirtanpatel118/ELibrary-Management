@@ -34,7 +34,7 @@ function BookRequest() {
       });
 
       axios
-        .get('http://localhost:3000/user/auth', {
+        .get('https://elibrary-management.onrender.com/user/auth', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -62,7 +62,7 @@ function BookRequest() {
     console.log(userEmail);
     try {
       const response = await axios.post(
-        `http://localhost:3000/faculty/request-book/${userEmail}`,
+        `https://elibrary-management.onrender.com/faculty/request-book/${userEmail}`,
         formData,
         {
           headers: {

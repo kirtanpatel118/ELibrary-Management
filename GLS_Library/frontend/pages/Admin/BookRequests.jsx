@@ -9,7 +9,7 @@ function BookRequests() {
   useEffect(() => {
     const fetchBookRequests = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/admin/book-requests`);
+        const response = await axios.get(`https://elibrary-management.onrender.com/admin/book-requests`);
         setBookRequests(response.data.bookRequests);
       } catch (err) {
         setError('Error fetching book requests');

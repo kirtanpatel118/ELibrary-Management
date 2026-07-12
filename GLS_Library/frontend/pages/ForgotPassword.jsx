@@ -43,11 +43,11 @@ function ForgotPassword() {
       // Define the endpoint based on the role
       let endpoint = '';
       if (role === 'admin') {
-        endpoint = 'http://localhost:3000/admin/forgot-password';
+        endpoint = 'https://elibrary-management.onrender.com/admin/forgot-password';
       } else if (role === 'faculty') {
-        endpoint = 'http://localhost:3000/faculty/forgot-password';
+        endpoint = 'https://elibrary-management.onrender.com/faculty/forgot-password';
       } else if (role === 'student') {
-        endpoint = 'http://localhost:3000/user/forgot-password';
+        endpoint = 'https://elibrary-management.onrender.com/user/forgot-password';
       }
 
       // Make the API request

@@ -26,8 +26,8 @@ const UserList = () => {
 
   const fetchData = async () => {
     try {
-      const facultyResponse = await axios.get('http://localhost:3000/admin/get-faculties');
-      const studentsResponse = await axios.get('http://localhost:3000/admin/get-students');
+      const facultyResponse = await axios.get('https://elibrary-management.onrender.com/admin/get-faculties');
+      const studentsResponse = await axios.get('https://elibrary-management.onrender.com/admin/get-students');
       setFaculties(facultyResponse.data.faculties);
       setStudents(studentsResponse.data.students);
     } catch (error) {
@@ -40,9 +40,9 @@ const UserList = () => {
   const handleDelete = async (id, isFaculty) => {
     try {
       if (isFaculty) {
-        await axios.delete(`http://localhost:3000/admin/faculty/${id}`);
+        await axios.delete(`https://elibrary-management.onrender.com/admin/faculty/${id}`);
       } else {
-        await axios.delete(`http://localhost:3000/admin/student/${id}`);
+        await axios.delete(`https://elibrary-management.onrender.com/admin/student/${id}`);
       }
       fetchData();
     } catch (error) {
@@ -70,8 +70,8 @@ const UserList = () => {
     try {
       const url =
         currentUser.role === 'faculty'
-          ? `http://localhost:3000/admin/faculty/${currentUser._id}`
-          : `http://localhost:3000/admin/student/${currentUser._id}`;
+          ? `https://elibrary-management.onrender.com/admin/faculty/${currentUser._id}`
+          : `https://elibrary-management.onrender.com/admin/student/${currentUser._id}`;
       await axios.patch(url, formData);
       setEditMode(false);
       setCurrentUser(null);

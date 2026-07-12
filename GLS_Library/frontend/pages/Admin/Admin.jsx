@@ -37,7 +37,7 @@ function Admin() {
   useEffect(() => {
     const fetchIssuedBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/admin/issued-books',{headers: {
+        const response = await axios.get('https://elibrary-management.onrender.com/admin/issued-books',{headers: {
           'Content-Type': 'application/json', // Indicates the type of data being sent
           'Accept': 'application/json' // Indicates the type of data expected in response
         }});
@@ -66,7 +66,7 @@ function Admin() {
   useEffect(() => {
     const token = localStorage.getItem('jwt_token');
     if (token) {
-      axios.get('http://localhost:3000/user/auth', {
+      axios.get('https://elibrary-management.onrender.com/user/auth', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {
@@ -100,7 +100,7 @@ function Admin() {
   // useEffect(() => {
   //   const token = localStorage.getItem('jwt_token');
   //   if (token) {
-  //     axios.get('http://localhost:3000/user/get-all-books', {
+  //     axios.get('https://elibrary-management.onrender.com/user/get-all-books', {
   //       headers: { Authorization: `Bearer ${token}` },
   //     })
   //       .then((response) => {
@@ -142,7 +142,7 @@ function Admin() {
   //   const uID=admin.userID;
 
   //   try {
-  //     const response = await axios.post(`http://localhost:3000/admin/addbook/${uID}`, formData, {
+  //     const response = await axios.post(`https://elibrary-management.onrender.com/admin/addbook/${uID}`, formData, {
   //       headers: {
   //         Authorization: `Bearer ${localStorage.getItem('JWT_Token')}`,
   //         'Content-Type': 'multipart/form-data',
@@ -165,7 +165,7 @@ function Admin() {
 
   const handleEdit = async (Book) => {
     // try {
-    //   const response = await axios.get(`http://localhost:3000/admin/get-book/${bookId}`, {
+    //   const response = await axios.get(`https://elibrary-management.onrender.com/admin/get-book/${bookId}`, {
     //     headers: {
     //       Authorization: `Bearer ${localStorage.getItem('JWT_Token')}`,
     //     },
@@ -189,7 +189,7 @@ function Admin() {
 
   const handleDelete = async (bookId) => {
     // try {
-    //   const response = await axios.delete(`http://localhost:3000/admin/delete-book/${bookId}`, {
+    //   const response = await axios.delete(`https://elibrary-management.onrender.com/admin/delete-book/${bookId}`, {
     //     headers: {
     //       Authorization: `Bearer ${localStorage.getItem('JWT_Token')}`,
     //     },
@@ -224,7 +224,7 @@ function Admin() {
             text: "Your Book has been deleted.",
             icon: "success"
           });
-          const response = axios.delete(`http://localhost:3000/admin/delete-book/${bookId}`, {
+          const response = axios.delete(`https://elibrary-management.onrender.com/admin/delete-book/${bookId}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('JWT_Token')}`,
             },
@@ -265,7 +265,7 @@ function Admin() {
     const uID = admin.userID;
 
     try {
-      const response = await axios.post(`http://localhost:3000/admin/addbook/${uID}`, formData, {
+      const response = await axios.post(`https://elibrary-management.onrender.com/admin/addbook/${uID}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('jwt_token')}`,
           'Content-Type': 'multipart/form-data',
@@ -284,7 +284,7 @@ function Admin() {
   // useEffect(() => {
   //   const token = localStorage.getItem('jwt_token');
   //   if (token) {
-  //     axios.get('http://localhost:3000/user/auth', {
+  //     axios.get('https://elibrary-management.onrender.com/user/auth', {
   //       headers: { Authorization: `Bearer ${token}` },
   //     })
   //       .then((response) => {
@@ -322,7 +322,7 @@ function Admin() {
   useEffect(() => {
     const token = localStorage.getItem('jwt_token');
     if (token) {
-      axios.get('http://localhost:3000/user/get-all-books', {
+      axios.get('https://elibrary-management.onrender.com/user/get-all-books', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {

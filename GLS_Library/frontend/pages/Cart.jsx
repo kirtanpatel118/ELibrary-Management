@@ -22,7 +22,7 @@ function Cart() {
     // Get token and authenticate user
     const token = localStorage.getItem('jwt_token');
     if (token) {
-      axios.get('http://localhost:3000/user/auth', {
+      axios.get('https://elibrary-management.onrender.com/user/auth', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {
@@ -57,7 +57,7 @@ function Cart() {
     const token = localStorage.getItem('jwt_token');
     const uid = user._id;
 
-    axios.post(`http://localhost:3000/admin/final-issue/${uid}`, { books: Books }, {
+    axios.post(`https://elibrary-management.onrender.com/admin/final-issue/${uid}`, { books: Books }, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => {

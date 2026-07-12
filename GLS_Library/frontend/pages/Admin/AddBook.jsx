@@ -21,7 +21,7 @@ function AddBook() {
     useEffect(() => {
         const token = localStorage.getItem('jwt_token');
         if (token) {
-            axios.get('http://localhost:3000/user/auth', {
+            axios.get('https://elibrary-management.onrender.com/user/auth', {
                 headers: { Authorization: `Bearer ${token}` },
             })
                 .then((res) => {
@@ -54,7 +54,7 @@ function AddBook() {
         });
 
         try {
-            const response = await axios.post(`http://localhost:3000/admin/addbook/${admin.userID}`, formData, {
+            const response = await axios.post(`https://elibrary-management.onrender.com/admin/addbook/${admin.userID}`, formData, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('jwt_token')}`,
                     'Content-Type': 'multipart/form-data',

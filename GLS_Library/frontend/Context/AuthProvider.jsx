@@ -40,7 +40,7 @@ function AuthProvider({ children }) {
       return;
     }
 
-    axios.get('http://localhost:3000/user/auth', {
+    axios.get('https://elibrary-management.onrender.com/user/auth', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => {
